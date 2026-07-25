@@ -1,0 +1,426 @@
+import Link from "next/link";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
+
+export const metadata = {
+  title: "About Us | Power Electrode Ltd",
+  description:
+    "Learn about Power Electrode Ltd, a Ghanaian welding electrode manufacturer registered on 25 April 2025.",
+};
+
+const values = [
+  {
+    number: "01",
+    title: "Quality First",
+    description:
+      "We focus on producing dependable welding electrodes through careful material selection and controlled manufacturing.",
+  },
+  {
+    number: "02",
+    title: "Consistent Performance",
+    description:
+      "Our products are developed to support stable arc performance and reliable welding results.",
+  },
+  {
+    number: "03",
+    title: "Customer Focus",
+    description:
+      "We listen to our customers and work to provide products that support their welding requirements.",
+  },
+  {
+    number: "04",
+    title: "Continuous Improvement",
+    description:
+      "We are committed to improving our processes, products and customer experience as the company grows.",
+  },
+];
+
+const beliefs = [
+  {
+    label: "Our Mission",
+    title: "Dependable Products",
+    description:
+      "To manufacture reliable welding electrodes that help professionals achieve strong and consistent welding results.",
+  },
+  {
+    label: "Our Vision",
+    title: "A Trusted Ghanaian Brand",
+    description:
+      "To become a trusted welding electrode brand serving professionals, businesses and industries throughout Ghana and beyond.",
+  },
+  {
+    label: "Our Commitment",
+    title: "Quality at Every Stage",
+    description:
+      "To maintain care, consistency and responsibility throughout our manufacturing and customer-service processes.",
+  },
+];
+
+const processSteps = [
+  "Material selection",
+  "Core wire preparation",
+  "Flux preparation",
+  "Electrode coating",
+  "Drying and finishing",
+  "Inspection and packaging",
+];
+
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
+      <path
+        d="M5 12.5l4.2 4L19 7"
+        stroke="currentColor"
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export default function AboutPage() {
+  return (
+    <main className="min-h-screen bg-white">
+      <Header />
+
+      {/* About hero */}
+      <section className="px-3 pb-10 pt-2 sm:px-5 lg:px-8">
+        <div className="relative mx-auto min-h-[380px] max-w-[1800px] overflow-hidden rounded-[26px] bg-[#102a4a] sm:min-h-[420px] lg:rounded-[34px]">
+          <img
+            src="/images/frame1.jpg"
+            alt="Power Electrode Ltd welding operations"
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-[#071a31]/95 via-[#071a31]/75 to-[#071a31]/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/70 to-transparent" />
+
+          <div className="pointer-events-none absolute inset-3 rounded-[20px] border border-white/10 sm:inset-4 lg:rounded-[27px]" />
+
+          <div className="relative z-10 mx-auto flex min-h-[380px] max-w-7xl items-center px-6 py-14 sm:min-h-[420px] sm:px-10 lg:px-14">
+            <div className="max-w-3xl">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-400">
+                Power Electrode Ltd
+              </p>
+
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+                About Us
+              </h1>
+
+              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+                Building a dependable Ghanaian welding electrode brand focused
+                on strength, consistency and quality manufacturing.
+              </p>
+
+              <div className="mt-7 flex items-center gap-2 text-sm text-white/60">
+                <Link
+                  href="/"
+                  className="transition-colors hover:text-orange-400"
+                >
+                  Home
+                </Link>
+
+                <span>/</span>
+
+                <span className="text-white">About Us</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who we are */}
+      <section className="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
+          <div>
+            <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
+              <span className="h-px w-5 bg-orange-500" />
+
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
+                Who We Are
+              </p>
+            </div>
+
+            <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+              A New Ghanaian Brand With a Powerful Purpose
+            </h2>
+
+            <p className="mt-6 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+              Power Electrode Ltd is a Ghanaian welding electrode company
+              officially registered on 25 April 2025. The company was
+              established with a clear goal: to manufacture dependable welding
+              electrodes for professionals, fabricators, contractors and
+              industrial businesses.
+            </p>
+
+            <p className="mt-5 leading-7 text-slate-600">
+              We are focused on producing electrodes that support stable arc
+              performance, reliable weld strength and consistent operation
+              across different welding applications.
+            </p>
+
+            <p className="mt-5 leading-7 text-slate-600">
+              As we continue to grow, our priority is to build lasting customer
+              relationships through quality products, responsible manufacturing
+              and dependable service.
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-4">
+              <div className="rounded-2xl border border-slate-200 bg-[#f7f8fa] p-5">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-500">
+                  Registered
+                </p>
+
+                <p className="mt-2 text-lg font-bold text-slate-900 sm:text-xl">
+                  25 April 2025
+                </p>
+              </div>
+
+              <div className="rounded-2xl border border-slate-200 bg-[#f7f8fa] p-5">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-500">
+                  Our Industry
+                </p>
+
+                <p className="mt-2 text-lg font-bold text-slate-900 sm:text-xl">
+                  Welding Electrodes
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="relative min-h-[500px] overflow-hidden rounded-[28px] sm:min-h-[600px]">
+            <img
+              src="/images/pic2.jpg"
+              alt="Power Electrode Ltd welding electrodes"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/75 via-transparent to-transparent" />
+
+            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071a31]/50 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+                Our Purpose
+              </p>
+
+              <p className="mt-2 text-xl font-bold sm:text-2xl">
+                Manufacturing products welding professionals can depend on
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section
+        id="quality"
+        className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24"
+      >
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
+              Our Values
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              What Drives Us
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-600">
+              The principles shaping how we manufacture our products, serve our
+              customers and grow Power Electrode Ltd.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value) => (
+              <article
+                key={value.number}
+                className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-sm font-bold text-orange-500 transition-colors group-hover:bg-orange-500 group-hover:text-white">
+                  {value.number}
+                </span>
+
+                <h3 className="mt-5 text-lg font-bold text-slate-900">
+                  {value.title}
+                </h3>
+
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  {value.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission, vision and commitment */}
+      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
+              What We Believe In
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Building Power Electrode Ltd for the Future
+            </h2>
+          </div>
+
+          <div className="mt-12 grid gap-6 md:grid-cols-3">
+            {beliefs.map((belief) => (
+              <article
+                key={belief.label}
+                className="relative overflow-hidden rounded-[24px] bg-[#102a4a] p-7 text-white sm:p-8"
+              >
+                <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-white/5" />
+
+                <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+                  {belief.label}
+                </p>
+
+                <h3 className="relative mt-4 text-2xl font-bold">
+                  {belief.title}
+                </h3>
+
+                <p className="relative mt-4 text-sm leading-7 text-white/65">
+                  {belief.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Manufacturing process */}
+      <section className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
+                Our Manufacturing Process
+              </p>
+
+              <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
+                Quality Considered at Every Stage
+              </h2>
+
+              <p className="mt-5 leading-7 text-slate-600 sm:text-lg sm:leading-8">
+                Our manufacturing process follows a carefully managed sequence
+                from material preparation through to final inspection and
+                packaging.
+              </p>
+
+              <Link
+                href="/products"
+                className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+              >
+                Explore Our Products
+                <ArrowIcon />
+              </Link>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              {processSteps.map((step, index) => (
+                <div
+                  key={step}
+                  className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5"
+                >
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-sm font-bold text-orange-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+
+                  <p className="font-semibold text-slate-900">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quality commitment */}
+      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="mx-auto max-w-5xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10 lg:p-12">
+          <div className="text-center">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
+              Our Commitment
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Focused on Quality and Reliability
+            </h2>
+          </div>
+
+          <div className="mt-9 grid gap-4 sm:grid-cols-2">
+            {[
+              "Careful material preparation",
+              "Consistent manufacturing processes",
+              "Product inspection before packaging",
+              "Dependable customer support",
+            ].map((item) => (
+              <div
+                key={item}
+                className="flex items-center gap-3 rounded-xl bg-[#f7f8fa] p-4"
+              >
+                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-500">
+                  <CheckIcon />
+                </span>
+
+                <p className="text-sm font-medium text-slate-700">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10 lg:px-14">
+          <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/5" />
+          <div className="absolute -bottom-20 -left-16 h-52 w-52 rounded-full bg-white/5" />
+
+          <div className="relative mx-auto max-w-3xl">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">
+              Let&apos;s Build Stronger Welds Together
+            </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl leading-7 text-white/65">
+              Contact Power Electrode Ltd to discuss product enquiries, supply
+              requirements and bulk welding electrode orders.
+            </p>
+
+            <Link
+              href="/contact"
+              className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+            >
+              Contact Our Team
+              <ArrowIcon />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
