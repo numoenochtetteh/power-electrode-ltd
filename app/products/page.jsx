@@ -152,39 +152,38 @@ export default function ProductsPage() {
       <Header />
 
       {/* Product hero */}
-      <section className="px-3 pb-0 pt-2 sm:px-5 lg:px-8">
-        <div className="relative mx-auto min-h-[480px] max-w-[1800px] overflow-hidden rounded-t-[26px] bg-[#102a4a] sm:min-h-[520px] lg:rounded-t-[34px]">
+      <section className="px-3 pb-5 pt-1 sm:px-5 sm:pb-7 lg:px-8">
+        <div className="relative mx-auto min-h-[450px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[500px] lg:rounded-[34px]">
           <img
             src="/images/frame1.jpg"
             alt="Power Electrode Ltd welding electrodes"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071a31]/95 via-[#071a31]/80 to-[#071a31]/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/75 via-transparent to-[#071a31]/20" />
+          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
 
-          <div className="pointer-events-none absolute inset-3 rounded-t-[20px] border border-b-0 border-white/10 sm:inset-4 lg:rounded-t-[27px]" />
-
-          <div className="relative z-10 mx-auto flex min-h-[480px] max-w-7xl items-center px-6 py-14 sm:min-h-[520px] sm:px-10 lg:px-14">
+          <div className="relative z-10 mx-auto flex min-h-[450px] max-w-7xl items-end px-6 py-9 sm:min-h-[500px] sm:items-center sm:px-10 lg:px-14">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
                 Power Electrode Ltd Products
               </p>
 
-              <h1 className="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-4 text-4xl font-bold tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
                 Welding Electrodes
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8 lg:text-xl">
+              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
                 Quality welding electrodes manufactured for fabrication,
                 maintenance, construction and industrial welding applications
                 across Ghana.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <Link
                   href="/contact"
-                  className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
                 >
                   Send an Enquiry
                   <ArrowIcon />
@@ -192,7 +191,7 @@ export default function ProductsPage() {
 
                 <a
                   href="tel:+233244316183"
-                  className="inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl border border-white/35 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/35 bg-black/15 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
                 >
                   <PhoneIcon />
                   Call +233 244 316 183
@@ -204,7 +203,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Product highlights */}
-      <section className="bg-white px-4 py-8 shadow-[0_12px_35px_rgba(15,23,42,0.06)] sm:px-6 lg:px-8">
+      <section className="bg-white px-4 py-8 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {productHighlights.map((highlight, index) => (
             <div key={highlight.title} className="flex items-start gap-4">
@@ -225,7 +224,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Product cards */}
-      <section className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section id="grades" className="scroll-mt-28 bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">

@@ -104,35 +104,34 @@ export default function AboutPage() {
       <Header />
 
       {/* About hero */}
-      <section className="px-3 pb-10 pt-2 sm:px-5 lg:px-8">
-        <div className="relative mx-auto min-h-[380px] max-w-[1800px] overflow-hidden rounded-[26px] bg-[#102a4a] sm:min-h-[420px] lg:rounded-[34px]">
+      <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
+        <div className="relative mx-auto min-h-[360px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[410px] lg:rounded-[34px]">
           <img
             src="/images/frame1.jpg"
             alt="Power Electrode Ltd welding operations"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071a31]/95 via-[#071a31]/75 to-[#071a31]/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/70 to-transparent" />
+          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/38 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
 
-          <div className="pointer-events-none absolute inset-3 rounded-[20px] border border-white/10 sm:inset-4 lg:rounded-[27px]" />
-
-          <div className="relative z-10 mx-auto flex min-h-[380px] max-w-7xl items-center px-6 py-14 sm:min-h-[420px] sm:px-10 lg:px-14">
+          <div className="relative z-10 mx-auto flex min-h-[360px] max-w-7xl items-end px-6 py-9 sm:min-h-[410px] sm:items-center sm:px-10 lg:px-14">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-400">
                 Power Electrode Ltd
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-3 text-4xl font-bold tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
                 About Us
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
                 Building a dependable Ghanaian welding electrode brand focused
                 on strength, consistency and quality manufacturing.
               </p>
 
-              <div className="mt-7 flex items-center gap-2 text-sm text-white/60">
+              <div className="mt-6 flex items-center gap-2 text-xs text-white/65 sm:text-sm">
                 <Link
                   href="/"
                   className="transition-colors hover:text-orange-400"
@@ -208,7 +207,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[500px] overflow-hidden rounded-[28px] sm:min-h-[600px]">
+          <div className="relative min-h-[400px] overflow-hidden rounded-[26px] sm:min-h-[520px]">
             <img
               src="/images/pic2.jpg"
               alt="Power Electrode Ltd welding electrodes"

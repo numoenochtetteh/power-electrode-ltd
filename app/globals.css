@@ -4,8 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color palette from teal to purple accents */
-  --background: oklch(1 0 0);
+  --background: #fff;
   --foreground: oklch(0.15 0 0);
   --card: oklch(0.98 0 0);
   --card-foreground: oklch(0.15 0 0);
@@ -17,7 +16,7 @@
   --secondary-foreground: oklch(0.15 0 0);
   --muted: oklch(0.93 0 0);
   --muted-foreground: oklch(0.55 0 0);
-  --accent: oklch(0.55 0.15 280);
+  --accent: #f97316;
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
@@ -120,7 +119,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    scroll-behavior: smooth;
+    background: #fff;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-foreground;
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  :focus-visible {
+    outline: 3px solid rgb(249 115 22 / 0.45);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: rgb(249 115 22 / 0.22);
   }
 }

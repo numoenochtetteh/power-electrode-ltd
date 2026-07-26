@@ -9,11 +9,10 @@ import { Welder } from "@/components/welder";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-white">
       <Header />
       <Hero1 />
       <Welder />
-
       <ManufacturingDivisions />
       <AboutPreview />
       <Benefits />

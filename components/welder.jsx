@@ -17,83 +17,67 @@ const electrodeFeatures = [
 
 export function Welder() {
   return (
-    <section id="about" className="bg-muted/30 py-20 md:py-28">
+    <section id="electrodes" className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section heading */}
-        <div className="mx-auto mb-14 max-w-3xl text-center md:mb-20">
-          <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-500">
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+          <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
             Our Welding Electrodes
           </p>
 
-          <h2 className="mt-4 text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            Engineered for Stronger, More Reliable Welds
+          <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+            Built for Reliable Performance
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
-            Quality welding electrodes manufactured to deliver strength,
-            consistency and dependable performance across industrial,
-            construction and fabrication applications.
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-slate-600 sm:text-lg">
+            Carefully manufactured electrodes for fabrication, construction,
+            maintenance and professional welding applications.
           </p>
         </div>
 
-        {/* Image and content */}
-        <div className="grid items-stretch gap-12 md:grid-cols-2 lg:gap-16">
-          {/* Image */}
-          <div className="relative min-h-[520px] overflow-hidden rounded-[28px] md:min-h-[680px]">
+        <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
+          <div className="relative min-h-[360px] overflow-hidden rounded-[26px] sm:min-h-[460px] md:min-h-[560px]">
             <img
               src="/images/pic2.jpg"
               alt="High-quality welding electrodes"
               className="absolute inset-0 h-full w-full object-cover"
             />
 
-            {/* Image overlays */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
 
-            <div className="absolute bottom-6 left-6 right-6 rounded-2xl border border-white/20 bg-slate-950/35 p-5 text-white backdrop-blur-md sm:p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-orange-400">
+            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-slate-950/45 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
                 Built for performance
               </p>
-
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-2 text-lg font-bold sm:text-xl">
                 Reliable electrodes for professional welding
               </p>
             </div>
           </div>
 
-          {/* Content */}
-          <div className="flex flex-col justify-center gap-6">
+          <div className="flex flex-col justify-center gap-5">
             <div>
-              <p className="text-sm font-bold uppercase tracking-[0.2em] text-orange-500">
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-orange-500 sm:text-xs">
                 Quality You Can Depend On
               </p>
 
-              <h3 className="mt-3 text-3xl font-bold leading-tight text-foreground md:text-4xl lg:text-5xl">
-                Welding Electrodes Made for Strength and Consistency
+              <h3 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.03em] text-slate-950 sm:text-4xl">
+                Consistency in Every Electrode
               </h3>
             </div>
 
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
               Our welding electrodes are manufactured to support reliable weld
               quality across a wide range of metal fabrication and industrial
-              applications. Each product is developed with performance,
-              durability and ease of use in mind.
+              applications, with performance and ease of use in mind.
             </p>
 
-            <p className="leading-relaxed text-muted-foreground">
-              Whether used for construction, maintenance, repairs or general
-              fabrication, our electrodes provide stable arc performance and
-              dependable results for professional welders and industrial clients
-              across Ghana.
-            </p>
-
-            {/* Features */}
-            <div className="space-y-5 pt-4">
+            <div className="space-y-3 pt-1">
               {electrodeFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
+                  className="flex gap-3.5 rounded-2xl border border-slate-200 bg-white p-4"
                 >
-                  <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -111,9 +95,9 @@ export function Welder() {
                   </div>
 
                   <div>
-                    <p className="font-bold text-foreground">{feature.title}</p>
+                    <p className="font-bold text-slate-900">{feature.title}</p>
 
-                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
+                    <p className="mt-1 text-sm leading-6 text-slate-600">
                       {feature.description}
                     </p>
                   </div>
@@ -122,10 +106,10 @@ export function Welder() {
             </div>
 
             <a
-              href="#contact"
-              className="mt-3 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-orange-600 sm:w-fit"
+              href="/products"
+              className="mt-2 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#102a4a] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-500 sm:w-fit"
             >
-              Make an Enquiry
+              Explore Our Products
               <span aria-hidden="true">→</span>
             </a>
           </div>

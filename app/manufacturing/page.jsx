@@ -139,20 +139,19 @@ export default function ManufacturingPage() {
       <Header />
 
       {/* Image hero */}
-      <section className="px-3 pb-0 pt-2 sm:px-5 lg:px-8">
-        <div className="relative mx-auto min-h-[440px] max-w-[1800px] overflow-hidden rounded-[26px] bg-[#071a31] sm:min-h-[480px] lg:min-h-[520px] lg:rounded-[34px]">
+      <section className="px-3 pb-5 pt-1 sm:px-5 sm:pb-7 lg:px-8">
+        <div className="relative mx-auto min-h-[460px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[500px] lg:rounded-[34px]">
           <img
             src="/images/frame1.jpg"
             alt="Power Electrode Ltd manufacturing facility"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071a31]/95 via-[#071a31]/80 to-[#071a31]/35" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/75 via-transparent to-[#071a31]/20" />
+          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
 
-          <div className="pointer-events-none absolute inset-3 rounded-[20px] border border-white/10 sm:inset-4 lg:rounded-[27px]" />
-
-          <div className="relative z-10 mx-auto flex min-h-[440px] max-w-7xl items-center px-6 py-14 sm:min-h-[480px] sm:px-10 lg:min-h-[520px] lg:px-14">
+          <div className="relative z-10 mx-auto flex min-h-[460px] max-w-7xl items-end px-6 py-9 sm:min-h-[500px] sm:items-center sm:px-10 lg:px-14">
             <div className="max-w-3xl">
               <div className="inline-flex items-center gap-3 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 backdrop-blur-sm">
                 <span className="h-2 w-2 rounded-full bg-orange-400" />
@@ -162,19 +161,19 @@ export default function ManufacturingPage() {
                 </p>
               </div>
 
-              <h1 className="mt-6 text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-5 text-4xl font-bold leading-[1.04] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
                 Precision at Every Stage of Production
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
                 Explore how raw materials are prepared, processed, coated,
                 finished and packaged to produce dependable welding electrodes.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="#process-video"
-                  className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
                 >
                   Watch the Process
                   <ArrowIcon />
@@ -182,7 +181,7 @@ export default function ManufacturingPage() {
 
                 <Link
                   href="/contact"
-                  className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl border border-white/35 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/35 bg-black/15 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
                 >
                   Request a Quote
                   <ArrowIcon />
@@ -191,20 +190,13 @@ export default function ManufacturingPage() {
             </div>
           </div>
 
-          <div className="pointer-events-none absolute bottom-7 right-8 hidden items-center gap-3 text-white/35 lg:flex">
-            <span className="h-px w-16 bg-white/30" />
-
-            <span className="text-xs font-bold uppercase tracking-[0.25em]">
-              Made in Ghana
-            </span>
-          </div>
         </div>
       </section>
 
       {/* Manufacturing introduction and video */}
       <section
         id="process-video"
-        className="scroll-mt-28 bg-white px-4 py-20 sm:px-6 md:py-24 lg:px-8 lg:py-28"
+        className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
           {/* Heading */}

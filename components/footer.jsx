@@ -6,7 +6,6 @@ const footerLinks = [
     links: [
       { name: "About Us", href: "/about" },
       { name: "Manufacturing Process", href: "/manufacturing" },
-      { name: "Quality Commitment", href: "/about#quality" },
       { name: "Contact Us", href: "/contact" },
     ],
   },
@@ -14,7 +13,7 @@ const footerLinks = [
     title: "Products",
     links: [
       { name: "Welding Electrodes", href: "/products" },
-      { name: "Product Applications", href: "/products#applications" },
+      { name: "Compare Grades", href: "/products#grades" },
       { name: "Bulk Orders", href: "/contact" },
       { name: "Request a Quote", href: "/contact" },
     ],
@@ -23,9 +22,8 @@ const footerLinks = [
     title: "Support",
     links: [
       { name: "Product Enquiries", href: "/contact" },
-      { name: "Technical Support", href: "/contact" },
-      { name: "Delivery Information", href: "/contact" },
-      { name: "Frequently Asked Questions", href: "/faq" },
+      { name: "Call +233 244 316 183", href: "tel:+233244316183" },
+      { name: "Get Directions", href: "/contact#location" },
     ],
   },
 ];
@@ -56,7 +54,7 @@ export function Footer() {
     <footer className="bg-[#102a4a] text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Footer callout */}
-        <div className="flex flex-col gap-6 border-b border-white/15 py-10 sm:py-12 md:flex-row md:items-center md:justify-between">
+        <div className="flex flex-col gap-5 border-b border-white/15 py-9 sm:py-11 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-400">
               Power Your Next Project
@@ -82,11 +80,11 @@ export function Footer() {
         </div>
 
         {/* Main footer */}
-        <div className="grid gap-10 py-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12 lg:py-16">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 py-11 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr] lg:gap-12 lg:py-14">
           {/* Company information */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="col-span-2 sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-3">
-              <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white p-1">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white p-1 sm:h-16 sm:w-16">
                 <img
                   src="/images/power-electrode-logo.png"
                   alt="Power Electrode Ltd logo"
@@ -95,11 +93,11 @@ export function Footer() {
               </div>
 
               <div>
-                <p className="text-lg font-extrabold uppercase tracking-[0.08em] text-red-500">
+                <p className="text-base font-extrabold uppercase tracking-[0.08em] text-red-500 sm:text-lg">
                   Power
                 </p>
 
-                <p className="text-lg font-extrabold uppercase tracking-[0.08em] text-white">
+                <p className="text-base font-extrabold uppercase tracking-[0.08em] text-white sm:text-lg">
                   Electrode Ltd
                 </p>
               </div>
@@ -169,20 +167,6 @@ export function Footer() {
           <p>© {currentYear} Power Electrode Ltd. All rights reserved.</p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:justify-end">
-            <Link
-              href="/privacy"
-              className="transition-colors hover:text-orange-400"
-            >
-              Privacy Policy
-            </Link>
-
-            <Link
-              href="/terms"
-              className="transition-colors hover:text-orange-400"
-            >
-              Terms &amp; Conditions
-            </Link>
-
             <Link
               href="/contact"
               className="transition-colors hover:text-orange-400"

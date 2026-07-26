@@ -62,45 +62,44 @@ export default function ContactPage() {
       <Header />
 
       {/* Contact hero */}
-      <section className="px-3 pb-10 pt-2 sm:px-5 lg:px-8">
-        <div className="relative mx-auto min-h-[380px] max-w-[1800px] overflow-hidden rounded-[26px] bg-[#071a31] sm:min-h-[420px] lg:rounded-[34px]">
+      <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
+        <div className="relative mx-auto min-h-[420px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[450px] lg:rounded-[34px]">
           <img
             src="/images/frame1.jpg"
             alt="Contact Power Electrode Ltd"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
 
-          <div className="absolute inset-0 bg-gradient-to-r from-[#071a31]/95 via-[#071a31]/80 to-[#071a31]/40" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/70 to-transparent" />
+          <div className="absolute inset-0 bg-black/15" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
-          <div className="pointer-events-none absolute inset-3 rounded-[20px] border border-white/10 sm:inset-4 lg:rounded-[27px]" />
-
-          <div className="relative z-10 mx-auto flex min-h-[380px] max-w-7xl items-center px-6 py-14 sm:min-h-[420px] sm:px-10 lg:px-14">
+          <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-end px-6 py-9 sm:min-h-[450px] sm:items-center sm:px-10 lg:px-14">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
                 Get in Touch
               </p>
 
-              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+              <h1 className="mt-3 text-4xl font-bold leading-[1.03] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
                 Let&apos;s Discuss Your Welding Requirements
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 sm:text-lg sm:leading-8">
+              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
                 Contact Power Electrode Ltd for product information, quotations,
                 bulk orders and electrode recommendations.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href="tel:+233244316183"
-                  className="inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
                 >
                   Call +233 244 316 183
                 </a>
 
                 <a
                   href="#enquiry"
-                  className="group inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl border border-white/30 bg-white/10 px-7 py-4 font-semibold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
+                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/30 bg-black/15 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
                 >
                   Send an Enquiry
                   <ArrowIcon />
@@ -211,7 +210,7 @@ export default function ContactPage() {
       </section>
 
       {/* Location */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section id="location" className="scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-end gap-6 md:grid-cols-2">
             <div>

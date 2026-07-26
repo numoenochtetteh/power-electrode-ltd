@@ -21,11 +21,11 @@ export function ManufacturingDivisions() {
   return (
     <section
       id="manufacturing"
-      className="overflow-hidden bg-[#f7f8fa] px-4 py-20 sm:px-6 md:py-24 lg:px-8 lg:py-28"
+      className="overflow-hidden bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}
-        <div className="mx-auto mb-12 max-w-3xl text-center md:mb-14">
+        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
           <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
             <span className="h-px w-5 bg-orange-500" />
 
@@ -34,11 +34,11 @@ export function ManufacturingDivisions() {
             </p>
           </div>
 
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
             How Our Welding Electrodes Are Made
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-slate-600 sm:text-lg">
             From material preparation to final packaging, every stage of our
             manufacturing process is focused on producing strong, consistent and
             dependable welding electrodes.
@@ -46,8 +46,8 @@ export function ManufacturingDivisions() {
 
           {/* About page button */}
           <a
-            href="/about"
-            className="group mt-7 inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-all duration-300 hover:bg-orange-600 sm:w-fit"
+            href="/manufacturing"
+            className="group mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
           >
             Learn More About Our Process
             <ArrowIcon />
@@ -55,9 +55,9 @@ export function ManufacturingDivisions() {
         </div>
 
         {/* Manufacturing video */}
-        <div className="relative overflow-hidden rounded-[24px] bg-slate-950 shadow-[0_20px_60px_rgba(15,23,42,0.18)] sm:rounded-[32px]">
+        <div className="relative overflow-hidden rounded-[24px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[30px]">
           <video
-            className="h-[280px] w-full object-cover sm:h-[340px] md:h-[400px] lg:h-[600px]"
+            className="h-[300px] w-full object-cover sm:h-[380px] lg:h-[480px]"
             autoPlay
             muted
             loop
@@ -77,7 +77,7 @@ export function ManufacturingDivisions() {
               Power Electrode Ltd
             </p>
 
-            <h3 className="mt-2 max-w-2xl text-xl font-bold leading-tight sm:text-3xl lg:text-4xl">
+            <h3 className="mt-2 max-w-2xl text-xl font-bold leading-tight sm:text-2xl lg:text-3xl">
               Precision at Every Stage of Production
             </h3>
 

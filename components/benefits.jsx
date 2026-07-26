@@ -1,77 +1,3 @@
-// "use client";
-
-// export function Benefits() {
-//   const benefits = [
-//     {
-//       icon: "👤",
-//       title: "Personalized Training",
-//       description:
-//         "One-on-one sessions tailored to your skill level and career goals",
-//     },
-//     {
-//       icon: "⏰",
-//       title: "Flexible Scheduling",
-//       description: "Book sessions at times that work best for your schedule",
-//     },
-//     {
-//       icon: "💬",
-//       title: "Real-Time Feedback",
-//       description:
-//         "Get instant guidance and corrections during your training sessions",
-//     },
-//     {
-//       icon: "🚀",
-//       title: "Career Support",
-//       description:
-//         "Resume review, interview prep, and job placement guidance included",
-//     },
-//     {
-//       icon: "🛠️",
-//       title: "Tools & Resources",
-//       description: "Access to exclusive templates, guides, and industry tools",
-//     },
-//     {
-//       icon: "📈",
-//       title: "Lifetime Access",
-//       description:
-//         "Ongoing support and resources even after your training ends",
-//     },
-//   ];
-
-//   return (
-//     <section id="benefits" className="bg-background py-20 md:py-32">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="text-center mb-16">
-//           <p className="text-accent font-semibold text-sm uppercase tracking-wide">
-//             Why Choose Us
-//           </p>
-//           <h2 className="text-3xl md:text-4xl font-bold text-foreground mt-2 text-balance">
-//             Everything You Need to Succeed
-//           </h2>
-//           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-//             Comprehensive training designed to accelerate your career as a
-//             virtual assistant
-//           </p>
-//         </div>
-
-//         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-//           {benefits.map((benefit, index) => (
-//             <div
-//               key={index}
-//               className="bg-card border border-border rounded-xl p-8 hover:shadow-lg transition"
-//             >
-//               <div className="text-4xl mb-4">{benefit.icon}</div>
-//               <h3 className="text-xl font-semibold text-foreground mb-2">
-//                 {benefit.title}
-//               </h3>
-//               <p className="text-muted-foreground">{benefit.description}</p>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
 import {
   BadgeCheck,
   Factory,
@@ -124,7 +50,7 @@ export function Benefits() {
   return (
     <section
       id="why-us"
-      className="relative overflow-hidden bg-[#f7f8fa] px-4 py-20 sm:px-6 md:py-24 lg:px-8 lg:py-28"
+      className="relative overflow-hidden bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       {/* Decorative background */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-100/70 blur-3xl" />
@@ -140,11 +66,11 @@ export function Benefits() {
             </p>
           </div>
 
-          <h2 className="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
             The Power Electrode Advantage
           </h2>
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg">
+          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-slate-600 sm:text-lg">
             We combine local manufacturing expertise with strict quality
             standards to deliver strong, consistent and dependable welding
             electrodes to professionals and industries across Ghana.
@@ -152,23 +78,23 @@ export function Benefits() {
         </div>
 
         {/* Benefit cards */}
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:mt-14 md:grid-cols-2 md:gap-6 lg:mt-16 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
           {benefits.map((benefit) => {
             const Icon = benefit.icon;
 
             return (
               <article
                 key={benefit.title}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_12px_35px_rgba(15,23,42,0.07)] transition-all duration-300 hover:-translate-y-1.5 hover:border-orange-200 hover:shadow-[0_20px_45px_rgba(15,23,42,0.12)] sm:p-7 lg:min-h-[260px]"
+                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.05)] transition-all duration-300 hover:border-orange-200 sm:p-6"
               >
                 {/* Orange hover line */}
                 <div className="absolute left-0 top-0 h-1 w-0 bg-orange-500 transition-all duration-500 group-hover:w-full" />
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-orange-200 bg-orange-50 text-orange-500 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-orange-200 bg-orange-50 text-orange-500 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
                   <Icon size={23} strokeWidth={2} />
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-slate-900">
+                <h3 className="mt-5 text-lg font-bold text-slate-900 sm:text-xl">
                   {benefit.title}
                 </h3>
 
@@ -179,11 +105,7 @@ export function Benefits() {
             );
           })}
         </div>
-        <br />
-
-        {/* Bottom callout */}
-        {/* Bottom callout */}
-        <div className="relative mt-10 overflow-hidden rounded-2xl bg-[#17375e] px-5 py-10 text-center sm:px-8 sm:py-12 lg:px-10">
+        <div className="relative mt-8 overflow-hidden rounded-[24px] bg-[#17375e] px-5 py-8 text-center sm:mt-10 sm:px-8 sm:py-10 lg:px-10">
           {/* Decorative circles */}
           <div className="pointer-events-none absolute -bottom-16 -left-16 h-36 w-36 rounded-full bg-white/10 sm:h-44 sm:w-44" />
 
@@ -191,7 +113,7 @@ export function Benefits() {
 
           {/* Content */}
           <div className="relative z-10 mx-auto max-w-3xl">
-            <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
+            <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
               Ready to Work With Ghana&apos;s Trusted Welding Electrode
               Manufacturer?
             </h3>
@@ -203,7 +125,7 @@ export function Benefits() {
 
             <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href="#contact"
+                href="/contact"
                 className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 sm:w-auto"
               >
                 Send an Enquiry
@@ -211,7 +133,7 @@ export function Benefits() {
               </a>
 
               <a
-                href="tel:+233000000000"
+                href="tel:+233244316183"
                 className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#17375e] sm:w-auto"
               >
                 <svg
