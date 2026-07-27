@@ -75,8 +75,8 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
-  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-manrope);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -114,28 +114,44 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 }
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
   }
+
   html {
     scroll-behavior: smooth;
     background: #fff;
   }
+
   body {
     @apply bg-white text-foreground;
     min-width: 320px;
     overflow-x: hidden;
+    font-family: var(--font-inter), Arial, sans-serif;
   }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-manrope), Arial, sans-serif;
+    letter-spacing: -0.035em;
+  }
+
   button,
   a {
+    font-family: var(--font-inter), Arial, sans-serif;
     -webkit-tap-highlight-color: transparent;
   }
+
   :focus-visible {
     outline: 3px solid rgb(249 115 22 / 0.45);
     outline-offset: 3px;
   }
+
   ::selection {
     background: rgb(249 115 22 / 0.22);
   }

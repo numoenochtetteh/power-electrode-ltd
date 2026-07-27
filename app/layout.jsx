@@ -1,9 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Power Electrode Ltd",
@@ -19,8 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
+      <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         {children}
+
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>
     </html>
