@@ -8,25 +8,6 @@ export const metadata = {
     "Explore welding electrodes manufactured by Power Electrode Ltd for fabrication, maintenance and industrial applications.",
 };
 
-const productHighlights = [
-  {
-    title: "Local Manufacturing",
-    description: "Made in Ghana with a focus on consistent product quality.",
-  },
-  {
-    title: "Quality Focused",
-    description: "Carefully manufactured for dependable welding results.",
-  },
-  {
-    title: "Stable Arc",
-    description: "Designed for smooth ignition and consistent operation.",
-  },
-  {
-    title: "Reliable Performance",
-    description: "Dependable electrodes for professional welding applications.",
-  },
-];
-
 const products = [
   {
     grade: "Grade 12",
@@ -118,20 +99,6 @@ function ArrowIcon() {
   );
 }
 
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="M5 12.5l4.2 4L19 7"
-        stroke="currentColor"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function PhoneIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
@@ -153,17 +120,21 @@ export default function ProductsPage() {
 
       {/* Product hero */}
       <section className="px-3 pb-5 pt-1 sm:px-5 sm:pb-7 lg:px-8">
-        <div className="relative mx-auto min-h-[450px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[500px] lg:rounded-[34px]">
+        <div className="relative mx-auto min-h-[450px] max-w-[1800px] overflow-hidden rounded-none bg-slate-950 sm:min-h-[500px] sm:rounded-[28px] lg:rounded-[34px]">
           <img
             src="/images/frame1.jpg"
             alt="Power Electrode Ltd welding electrodes"
             className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
 
+          {/* Image overlays */}
           <div className="absolute inset-0 bg-black/15" />
+
           <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
+
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
 
+          {/* Hero content */}
           <div className="relative z-10 mx-auto flex min-h-[450px] max-w-7xl items-end px-6 py-9 sm:min-h-[500px] sm:items-center sm:px-10 lg:px-14">
             <div className="max-w-3xl">
               <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
@@ -202,29 +173,11 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Product highlights */}
-      <section className="bg-white px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {productHighlights.map((highlight, index) => (
-            <div key={highlight.title} className="flex items-start gap-4">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-sm font-bold text-orange-500">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
-              <div>
-                <h2 className="font-bold text-slate-900">{highlight.title}</h2>
-
-                <p className="mt-1 text-sm leading-6 text-slate-600">
-                  {highlight.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Product cards */}
-      <section id="grades" className="scroll-mt-28 bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section
+        id="grades"
+        className="scroll-mt-28 bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
@@ -312,7 +265,7 @@ export default function ProductsPage() {
       </section>
 
       {/* Product comparison */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-6xl">
           <div className="text-center">
             <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
@@ -329,14 +282,17 @@ export default function ProductsPage() {
           </div>
 
           <div className="mt-10 overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-[0_12px_35px_rgba(15,23,42,0.06)]">
-            <table className="min-w-[760px] w-full border-collapse text-left">
+            <table className="w-full min-w-[760px] border-collapse text-left">
               <thead>
                 <tr className="bg-[#102a4a] text-white">
                   <th className="px-5 py-4 text-sm font-semibold">
                     Comparison
                   </th>
+
                   <th className="px-5 py-4 text-sm font-semibold">Grade 12</th>
+
                   <th className="px-5 py-4 text-sm font-semibold">Grade 10</th>
+
                   <th className="px-5 py-4 text-sm font-semibold">Grade 8</th>
                 </tr>
               </thead>
@@ -419,9 +375,10 @@ export default function ProductsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10">
           <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/5" />
+
           <div className="absolute -bottom-20 -left-16 h-52 w-52 rounded-full bg-white/5" />
 
           <div className="relative mx-auto max-w-3xl">
