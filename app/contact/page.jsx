@@ -65,7 +65,7 @@ export default function ContactPage() {
       <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
         <div className="relative mx-auto min-h-[420px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[450px] lg:rounded-[34px]">
           <img
-            src="/images/frame1.jpg"
+            src="/images/frame4.jpg"
             alt="Contact Power Electrode Ltd"
             className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
@@ -210,7 +210,10 @@ export default function ContactPage() {
       </section>
 
       {/* Location */}
-      <section id="location" className="scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section
+        id="location"
+        className="scroll-mt-28 px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      >
         <div className="mx-auto max-w-7xl">
           <div className="grid items-end gap-6 md:grid-cols-2">
             <div>

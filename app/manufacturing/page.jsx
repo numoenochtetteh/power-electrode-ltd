@@ -142,7 +142,7 @@ export default function ManufacturingPage() {
       <section className="px-3 pb-5 pt-1 sm:px-5 sm:pb-7 lg:px-8">
         <div className="relative mx-auto min-h-[460px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[500px] lg:rounded-[34px]">
           <img
-            src="/images/frame1.jpg"
+            src="/images/frame2.jpg"
             alt="Power Electrode Ltd manufacturing facility"
             className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />
@@ -189,7 +189,6 @@ export default function ManufacturingPage() {
               </div>
             </div>
           </div>
-
         </div>
       </section>
 

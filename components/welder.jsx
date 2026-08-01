@@ -1,5 +1,3 @@
-"use client";
-
 const electrodeFeatures = [
   {
     title: "Consistent Arc Performance",
@@ -19,6 +17,7 @@ export function Welder() {
   return (
     <section id="electrodes" className="bg-white py-16 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section heading */}
         <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
             Our Welding Electrodes
@@ -34,10 +33,12 @@ export function Welder() {
           </p>
         </div>
 
+        {/* Image and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
+          {/* Image */}
           <div className="relative min-h-[360px] overflow-hidden rounded-[26px] sm:min-h-[460px] md:min-h-[560px]">
             <img
-              src="/images/pic2.jpg"
+              src="/images/pic1.jpg"
               alt="High-quality welding electrodes"
               className="absolute inset-0 h-full w-full object-cover"
             />
@@ -46,16 +47,19 @@ export function Welder() {
 
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-slate-950/45 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
-                Built for performance
+                Built for Performance
               </p>
+
               <p className="mt-2 text-lg font-bold sm:text-xl">
                 Reliable electrodes for professional welding
               </p>
             </div>
           </div>
 
+          {/* Right-side content */}
           <div className="flex flex-col justify-center gap-5">
-            <div>
+            {/* Centred only on phones */}
+            <div className="text-center sm:text-left">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-orange-500 sm:text-xs">
                 Quality You Can Depend On
               </p>
@@ -65,12 +69,13 @@ export function Welder() {
               </h3>
             </div>
 
-            <p className="text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+            <p className="text-center text-base leading-7 text-slate-600 sm:text-left sm:text-lg sm:leading-8">
               Our welding electrodes are manufactured to support reliable weld
               quality across a wide range of metal fabrication and industrial
               applications, with performance and ease of use in mind.
             </p>
 
+            {/* Product features */}
             <div className="space-y-3 pt-1">
               {electrodeFeatures.map((feature) => (
                 <div

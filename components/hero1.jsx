@@ -30,10 +30,10 @@ export function Hero1() {
           loop
           playsInline
           preload="metadata"
-          poster="/images/welding-hero.jpg"
+          poster="/images/welding-heroo.png"
           aria-label="Welder working with industrial equipment"
         >
-          <source src="/video/vid2.mp4" type="video/mp4" />
+          <source src="/video/vid3.mp4" type="video/mp4" />
         </video>
 
         {/* Neutral overlays keep the copy readable without hiding the footage. */}

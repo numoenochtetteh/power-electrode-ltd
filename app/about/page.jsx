@@ -107,7 +107,7 @@ export default function AboutPage() {
       <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
         <div className="relative mx-auto min-h-[360px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[410px] lg:rounded-[34px]">
           <img
-            src="/images/frame1.jpg"
+            src="/images/frame3.jpg"
             alt="Power Electrode Ltd welding operations"
             className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
           />

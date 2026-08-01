@@ -74,32 +74,35 @@ export function AboutPreview() {
             </div>
           </div>
 
-          {/* Content */}
+          {/* Right-side content */}
           <div>
-            <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
-              <span className="h-px w-5 bg-orange-500" />
+            {/* Centred only on phones */}
+            <div className="text-center sm:text-left">
+              <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
+                <span className="h-px w-5 bg-orange-500" />
 
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
-                About Power Electrode Ltd
+                <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
+                  About Power Electrode Ltd
+                </p>
+              </div>
+
+              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+                Powering Stronger Welds
+                <span className="block text-orange-500">Across Ghana.</span>
+              </h2>
+
+              <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+                Power Electrode Ltd is a Ghanaian welding electrode manufacturer
+                committed to supplying reliable products to welders,
+                fabricators, contractors and industrial businesses.
+              </p>
+
+              <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+                We focus on consistent arc performance, dependable weld strength
+                and responsible manufacturing—giving professionals electrodes
+                they can trust across different applications.
               </p>
             </div>
-
-            <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
-              Powering Stronger Welds
-              <span className="block text-orange-500">Across Ghana.</span>
-            </h2>
-
-            <p className="mt-5 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              Power Electrode Ltd is a Ghanaian welding electrode manufacturer
-              committed to supplying reliable products to welders, fabricators,
-              contractors and industrial businesses.
-            </p>
-
-            <p className="mt-4 text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-              We focus on consistent arc performance, dependable weld strength
-              and responsible manufacturing—giving professionals electrodes they
-              can trust across different applications.
-            </p>
 
             {/* Strength cards */}
             <div className="mt-7 grid grid-cols-2 gap-3 sm:gap-4">
@@ -110,7 +113,7 @@ export function AboutPreview() {
                 >
                   <div className="absolute left-0 top-0 h-1 w-0 bg-orange-500 transition-all duration-300 group-hover:w-full" />
 
-                  <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-start justify-between gap-3">
                     <div>
                       <p className="text-lg font-bold text-slate-900 sm:text-2xl">
                         {strength.title}
@@ -121,7 +124,7 @@ export function AboutPreview() {
                       </p>
                     </div>
 
-                    <span className="text-sm font-bold text-orange-500">
+                    <span className="shrink-0 text-sm font-bold text-orange-500">
                       {strength.number}
                     </span>
                   </div>
@@ -141,7 +144,7 @@ export function AboutPreview() {
 
               <Link
                 href="/manufacturing"
-                className="group inline-flex items-center justify-center gap-2 py-3 text-sm font-semibold text-slate-700 transition-colors hover:text-orange-500 sm:justify-start"
+                className="group inline-flex min-h-12 items-center justify-center gap-2 px-4 py-3 text-sm font-semibold text-slate-700 transition-colors hover:text-orange-500 sm:justify-start"
               >
                 See How We Manufacture
                 <ArrowIcon />
