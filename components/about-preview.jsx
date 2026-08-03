@@ -40,18 +40,27 @@ export function AboutPreview() {
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
-          {/* Image column */}
+          {/* Video column */}
           <div className="relative">
-            {/* Orange shape behind image */}
+            {/* Orange shape behind video */}
             <div className="absolute -bottom-4 -right-4 h-[85%] w-[85%] rounded-[30px] bg-orange-100 sm:-bottom-5 sm:-right-5" />
 
             <div className="relative min-h-[410px] overflow-hidden rounded-[26px] border border-white/40 shadow-[0_20px_55px_rgba(15,23,42,0.12)] sm:min-h-[500px] md:min-h-[560px]">
-              <img
-                src="/images/pic3.jpg"
-                alt="Welding electrodes manufactured by Power Electrode Ltd"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
-              />
+              <video
+                className="absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                poster="/images/pic3.jpg"
+                aria-label="Power Electrode Ltd welding electrode manufacturing"
+              >
+                <source src="/video/vid4.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
 
+              {/* Video overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-black/10" />
 
               {/* Registration badge */}
@@ -59,7 +68,7 @@ export function AboutPreview() {
                 Registered April 2025
               </div>
 
-              {/* Image information */}
+              {/* Video information */}
               <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-slate-950/45 p-5 text-white shadow-lg backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
                 <div className="mb-3 h-1 w-10 rounded-full bg-orange-500" />
 

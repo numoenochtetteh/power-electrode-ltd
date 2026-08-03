@@ -33,18 +33,28 @@ export function Welder() {
           </p>
         </div>
 
-        {/* Image and content */}
+        {/* Video and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
-          {/* Image */}
-          <div className="relative min-h-[360px] overflow-hidden rounded-[26px] sm:min-h-[460px] md:min-h-[560px]">
-            <img
-              src="/images/pic1.jpg"
-              alt="High-quality welding electrodes"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+          {/* Video */}
+          <div className="relative min-h-[360px] overflow-hidden rounded-[26px] bg-slate-950 sm:min-h-[460px] md:min-h-[560px]">
+            <video
+              className="absolute inset-0 h-full w-full scale-[1.85] object-cover object-center"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              poster="/images/pic1.jpg"
+              aria-label="Power Electrode Ltd welding electrode production"
+            >
+              <source src="/video/vid5.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent" />
+            {/* Video overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-black/5 to-transparent" />
 
+            {/* Video information */}
             <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-slate-950/45 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
                 Built for Performance
