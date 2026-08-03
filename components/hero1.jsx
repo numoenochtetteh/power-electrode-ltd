@@ -22,7 +22,7 @@ function ArrowIcon() {
 export function Hero1() {
   return (
     <section className="bg-white p-0 sm:px-5 sm:pb-7 sm:pt-1 lg:px-8">
-      <div className="relative mx-auto min-h-[90svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
+      <div className="relative mx-auto min-h-[80svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
         {/* Background video */}
         <video
           className="absolute inset-0 h-full w-full object-cover object-[44%_center] sm:object-center"
@@ -45,7 +45,7 @@ export function Hero1() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25 sm:from-black/60" />
 
         {/* Hero content */}
-        <div className="relative z-10 mx-auto flex min-h-[90svh] max-w-7xl items-start px-5 pb-8 pt-66 sm:min-h-[610px] sm:items-center sm:px-10 sm:py-11 lg:min-h-[570px] lg:px-14 lg:py-12">
+        <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl items-start px-5 pb-8 pt-66 sm:min-h-[610px] sm:items-center sm:px-10 sm:py-11 lg:min-h-[570px] lg:px-14 lg:py-12">
           <div className="w-full max-w-3xl">
             {/* Company label */}
             <p className="inline-flex rounded-full border border-orange-400/40 bg-black/25 px-3.5 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-orange-300 backdrop-blur-sm sm:text-[10px]">
