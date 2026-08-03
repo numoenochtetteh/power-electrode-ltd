@@ -24,7 +24,7 @@ export function Hero1() {
     <section className="bg-white p-0 sm:px-5 sm:pb-7 sm:pt-1 lg:px-8">
       <div className="relative mx-auto min-h-[80svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
         <video
-          className="absolute inset-0 h-full w-full object-cover object-[52%_center] sm:object-center"
+          className="absolute inset-0 h-full w-full object-cover object-[44%_center] sm:object-center"
           autoPlay
           muted
           loop
