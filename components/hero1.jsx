@@ -23,6 +23,7 @@ export function Hero1() {
   return (
     <section className="bg-white p-0 sm:px-5 sm:pb-7 sm:pt-1 lg:px-8">
       <div className="relative mx-auto min-h-[80svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
+        {/* Background video */}
         <video
           className="absolute inset-0 h-full w-full object-cover object-[44%_center] sm:object-center"
           autoPlay
@@ -36,16 +37,22 @@ export function Hero1() {
           <source src="/video/vid3.mp4" type="video/mp4" />
         </video>
 
+        {/* Video overlays */}
         <div className="absolute inset-0 bg-black/20" />
+
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/5" />
+
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25 sm:from-black/60" />
-        <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl items-center px-5 pb-8 pt-20 sm:min-h-[610px] sm:px-10 sm:pb-11 sm:pt-24 lg:min-h-[570px] lg:px-14 lg:py-12">
-          {" "}
-          <div className="w-full max-w-3xl -translate-y-10 sm:translate-y-0">
-            <p className="inline-flex rounded-full border border-orange-400/40 bg-black/20 px-3.5 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-orange-300 backdrop-blur-sm sm:text-[10px]">
+
+        {/* Hero content */}
+        <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl items-start px-5 pb-8 pt-36 sm:min-h-[610px] sm:items-center sm:px-10 sm:py-11 lg:min-h-[570px] lg:px-14 lg:py-12">
+          <div className="w-full max-w-3xl">
+            {/* Company label */}
+            <p className="inline-flex rounded-full border border-orange-400/40 bg-black/25 px-3.5 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-orange-300 backdrop-blur-sm sm:text-[10px]">
               Power Electrode Ltd
             </p>
 
+            {/* Main heading */}
             <h1 className="mt-5 max-w-[760px] text-[2.45rem] font-bold leading-[1.01] tracking-[-0.045em] text-white drop-shadow-[0_3px_14px_rgba(0,0,0,0.55)] min-[390px]:text-[2.7rem] sm:text-6xl lg:text-[4.35rem]">
               Manufacturers &amp; Suppliers of
               <span className="mt-1 block text-orange-400">
@@ -53,12 +60,14 @@ export function Hero1() {
               </span>
             </h1>
 
+            {/* Description */}
             <p className="mt-5 max-w-xl text-[14px] leading-6 text-white/85 drop-shadow-md min-[390px]:text-[15px] min-[390px]:leading-7 sm:max-w-2xl sm:text-lg sm:leading-8">
               Reliable welding electrodes engineered for stable arc performance,
               dependable strength and consistent results across professional and
               industrial applications.
             </p>
 
+            {/* Buttons */}
             <div className="mt-6 grid grid-cols-2 gap-2.5 sm:mt-7 sm:flex sm:gap-3">
               <Link
                 href="/contact"
@@ -77,8 +86,10 @@ export function Hero1() {
               </Link>
             </div>
 
+            {/* Mobile bottom detail */}
             <div className="mt-7 flex items-center gap-3 text-white/65 sm:hidden">
               <span className="h-px flex-1 bg-white/30" />
+
               <span className="text-[9px] font-bold uppercase tracking-[0.2em]">
                 Engineered in Ghana
               </span>
@@ -86,10 +97,12 @@ export function Hero1() {
           </div>
         </div>
 
+        {/* Desktop detail */}
         <div className="pointer-events-none absolute bottom-6 right-8 hidden items-center gap-3 text-white/45 lg:flex">
           <span className="h-px w-12 bg-white/40" />
+
           <span className="text-[10px] font-bold uppercase tracking-[0.24em]">
-            Engineered for performance
+            Engineered for Performance
           </span>
         </div>
       </div>
