@@ -22,7 +22,7 @@ function ArrowIcon() {
 export function Hero1() {
   return (
     <section className="bg-white p-0 sm:px-5 sm:pb-7 sm:pt-1 lg:px-8">
-      <div className="relative mx-auto min-h-[100svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
+      <div className="relative mx-auto min-h-[80svh] max-w-[1800px] overflow-hidden bg-slate-950 sm:min-h-[610px] sm:rounded-[28px] lg:min-h-[570px] lg:rounded-[34px]">
         <video
           className="absolute inset-0 h-full w-full object-cover object-[52%_center] sm:object-center"
           autoPlay
@@ -39,7 +39,7 @@ export function Hero1() {
         <div className="absolute inset-0 bg-black/20" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/25 to-black/5" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-black/25 sm:from-black/60" />
-        <div className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl items-center px-5 pb-8 pt-20 sm:min-h-[610px] sm:px-10 sm:pb-11 sm:pt-24 lg:min-h-[570px] lg:px-14 lg:py-12">
+        <div className="relative z-10 mx-auto flex min-h-[80svh] max-w-7xl items-center px-5 pb-8 pt-20 sm:min-h-[610px] sm:px-10 sm:pb-11 sm:pt-24 lg:min-h-[570px] lg:px-14 lg:py-12">
           {" "}
           <div className="w-full max-w-3xl -translate-y-10 sm:translate-y-0">
             <p className="inline-flex rounded-full border border-orange-400/40 bg-black/20 px-3.5 py-2 text-[9px] font-bold uppercase tracking-[0.18em] text-orange-300 backdrop-blur-sm sm:text-[10px]">
