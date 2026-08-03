@@ -21,11 +21,11 @@ export function ManufacturingDivisions() {
   return (
     <section
       id="manufacturing"
-      className="overflow-hidden bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      className="overflow-hidden bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       <div className="mx-auto max-w-7xl">
         {/* Section heading */}
-        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-12">
+        <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-12">
           <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
             <span className="h-px w-5 bg-orange-500" />
 
@@ -34,7 +34,7 @@ export function ManufacturingDivisions() {
             </p>
           </div>
 
-          <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-[2rem] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
             How Our Welding Electrodes Are Made
           </h2>
 
@@ -55,9 +55,9 @@ export function ManufacturingDivisions() {
         </div>
 
         {/* Manufacturing video */}
-        <div className="relative overflow-hidden rounded-[24px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[30px]">
+        <div className="relative overflow-hidden rounded-[22px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[30px]">
           <video
-            className="h-[300px] w-full object-cover sm:h-[380px] lg:h-[480px]"
+            className="h-[360px] w-full object-cover sm:h-[380px] lg:h-[480px]"
             autoPlay
             muted
             loop

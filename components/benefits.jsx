@@ -50,10 +50,10 @@ export function Benefits() {
   return (
     <section
       id="why-us"
-      className="relative overflow-hidden bg-[#f6f7f9] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      className="relative overflow-hidden bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
     >
       {/* Decorative background */}
-      <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-72 -translate-x-1/2 rounded-full bg-orange-100/70 blur-3xl" />
+      <div className="pointer-events-none absolute left-1/2 top-0 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-orange-100/70 blur-3xl sm:block" />
 
       <div className="relative mx-auto max-w-7xl">
         {/* Section heading */}
@@ -66,7 +66,7 @@ export function Benefits() {
             </p>
           </div>
 
-          <h2 className="mt-4 text-3xl font-bold tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-4 text-[2rem] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
             The Power Electrode Advantage
           </h2>
 
@@ -85,7 +85,7 @@ export function Benefits() {
             return (
               <article
                 key={benefit.title}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_10px_28px_rgba(15,23,42,0.05)] transition-all duration-300 hover:border-orange-200 sm:p-6"
+                className="group relative overflow-hidden rounded-[18px] border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-orange-200 sm:rounded-2xl sm:p-6 sm:shadow-[0_10px_28px_rgba(15,23,42,0.05)]"
               >
                 {/* Orange hover line */}
                 <div className="absolute left-0 top-0 h-1 w-0 bg-orange-500 transition-all duration-500 group-hover:w-full" />
@@ -105,11 +105,11 @@ export function Benefits() {
             );
           })}
         </div>
-        <div className="relative mt-8 overflow-hidden rounded-[24px] bg-[#17375e] px-5 py-8 text-center sm:mt-10 sm:px-8 sm:py-10 lg:px-10">
+        <div className="relative mt-8 overflow-hidden rounded-[22px] bg-[#17375e] px-5 py-8 text-center sm:mt-10 sm:rounded-[24px] sm:px-8 sm:py-10 lg:px-10">
           {/* Decorative circles */}
-          <div className="pointer-events-none absolute -bottom-16 -left-16 h-36 w-36 rounded-full bg-white/10 sm:h-44 sm:w-44" />
+          <div className="pointer-events-none absolute -bottom-16 -left-16 hidden h-36 w-36 rounded-full bg-white/10 sm:block sm:h-44 sm:w-44" />
 
-          <div className="pointer-events-none absolute -right-14 -top-16 h-40 w-40 rounded-full bg-white/10 sm:h-48 sm:w-48" />
+          <div className="pointer-events-none absolute -right-14 -top-16 hidden h-40 w-40 rounded-full bg-white/10 sm:block sm:h-48 sm:w-48" />
 
           {/* Content */}
           <div className="relative z-10 mx-auto max-w-3xl">

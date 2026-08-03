@@ -34,18 +34,18 @@ const strengths = [
 
 export function AboutPreview() {
   return (
-    <section className="relative overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="relative overflow-hidden bg-white px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       {/* Decorative background */}
-      <div className="pointer-events-none absolute -right-40 top-20 h-96 w-96 rounded-full bg-orange-100/45 blur-3xl" />
+      <div className="pointer-events-none absolute -right-40 top-20 hidden h-96 w-96 rounded-full bg-orange-100/45 blur-3xl sm:block" />
 
       <div className="relative mx-auto max-w-7xl">
         <div className="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
           {/* Video column */}
           <div className="relative">
             {/* Orange shape behind video */}
-            <div className="absolute -bottom-4 -right-4 h-[85%] w-[85%] rounded-[30px] bg-orange-100 sm:-bottom-5 sm:-right-5" />
+            <div className="absolute -bottom-5 -right-5 hidden h-[85%] w-[85%] rounded-[30px] bg-orange-100 sm:block" />
 
-            <div className="relative min-h-[410px] overflow-hidden rounded-[26px] border border-white/40 shadow-[0_20px_55px_rgba(15,23,42,0.12)] sm:min-h-[500px] md:min-h-[560px]">
+            <div className="relative min-h-[430px] overflow-hidden rounded-[22px] border border-white/40 shadow-[0_18px_45px_rgba(15,23,42,0.1)] sm:min-h-[500px] sm:rounded-[26px] md:min-h-[560px]">
               <video
                 className="absolute inset-0 h-full w-full object-cover"
                 autoPlay
@@ -95,7 +95,7 @@ export function AboutPreview() {
                 </p>
               </div>
 
-              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+              <h2 className="mt-5 text-[2rem] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
                 Powering Stronger Welds
                 <span className="block text-orange-500">Across Ghana.</span>
               </h2>

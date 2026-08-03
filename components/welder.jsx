@@ -15,15 +15,15 @@ const electrodeFeatures = [
 
 export function Welder() {
   return (
-    <section id="electrodes" className="bg-white py-16 sm:py-20 lg:py-24">
+    <section id="electrodes" className="bg-white py-14 sm:py-20 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section heading */}
-        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
+        <div className="mx-auto mb-8 max-w-3xl text-center sm:mb-14">
           <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
             Our Welding Electrodes
           </p>
 
-          <h2 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
+          <h2 className="mt-3 text-[2rem] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
             Built for Reliable Performance
           </h2>
 
@@ -36,7 +36,7 @@ export function Welder() {
         {/* Video and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
           {/* Video */}
-          <div className="relative min-h-[360px] overflow-hidden rounded-[26px] bg-slate-950 sm:min-h-[460px] md:min-h-[560px]">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[22px] bg-slate-950 sm:min-h-[460px] sm:rounded-[26px] md:min-h-[560px]">
             <video
               className="absolute inset-0 h-full w-full scale-[1.85] object-cover object-center"
               autoPlay
@@ -55,7 +55,7 @@ export function Welder() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-black/5 to-transparent" />
 
             {/* Video information */}
-            <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/20 bg-slate-950/45 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:p-5">
+            <div className="absolute bottom-4 left-4 right-4 rounded-[18px] border border-white/20 bg-slate-950/55 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:rounded-2xl sm:p-5">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
                 Built for Performance
               </p>
@@ -74,7 +74,7 @@ export function Welder() {
                 Quality You Can Depend On
               </p>
 
-              <h3 className="mt-3 text-3xl font-bold leading-tight tracking-[-0.03em] text-slate-950 sm:text-4xl">
+              <h3 className="mt-3 text-[1.75rem] font-bold leading-tight tracking-[-0.03em] text-slate-950 sm:text-4xl">
                 Consistency in Every Electrode
               </h3>
             </div>
@@ -90,7 +90,7 @@ export function Welder() {
               {electrodeFeatures.map((feature) => (
                 <div
                   key={feature.title}
-                  className="flex gap-3.5 rounded-2xl border border-slate-200 bg-white p-4"
+                  className="flex gap-3.5 border-b border-slate-200 py-4 first:pt-2 last:border-b-0 sm:rounded-2xl sm:border sm:bg-white sm:p-4"
                 >
                   <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
                     <svg
