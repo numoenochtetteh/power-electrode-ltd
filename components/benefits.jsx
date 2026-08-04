@@ -1,159 +1,313 @@
-import {
-  BadgeCheck,
-  Factory,
-  Headphones,
-  ShieldCheck,
-  Truck,
-  Zap,
-} from "lucide-react";
+import Link from "next/link";
 
-const benefits = [
+const advantages = [
   {
+    icon: "factory",
     title: "Local Manufacturing",
     description:
-      "Our local production operation supports dependable quality control, product availability and efficient delivery to customers across Ghana.",
-    icon: Factory,
+      "Manufactured in Ghana with carefully controlled production standards.",
+    href: "/manufacturing",
   },
   {
+    icon: "quality",
     title: "Proven Quality",
     description:
-      "Our welding electrodes are manufactured with careful quality standards to provide reliable results across different welding applications.",
-    icon: BadgeCheck,
+      "Carefully produced to deliver dependable professional welding results.",
+    href: "/manufacturing",
   },
   {
-    title: "Reliable Performance",
+    icon: "arc",
+    title: "Stable Arc",
     description:
-      "Engineered to produce strong, durable welds with dependable performance for fabrication, construction, maintenance and repair work.",
-    icon: ShieldCheck,
+      "Designed for smooth ignition and consistent electrode operation.",
+    href: "/products",
   },
   {
-    title: "Consistent Arc Stability",
+    icon: "strength",
+    title: "Strong Welds",
     description:
-      "Our electrodes provide smooth ignition, a stable arc and consistent operation to help welders achieve cleaner and stronger results.",
-    icon: Zap,
+      "Engineered to support strength, durability and reliable performance.",
+    href: "/products",
   },
   {
-    title: "On-Time Delivery",
+    icon: "delivery",
+    title: "Reliable Supply",
     description:
-      "Our distribution and logistics process helps ensure that customer orders arrive safely and when they are needed.",
-    icon: Truck,
+      "Securely packaged and prepared for safe, dependable delivery.",
+    href: "/contact",
   },
   {
-    title: "Customer Support",
+    icon: "support",
+    title: "Product Support",
     description:
-      "Our relationship continues beyond delivery. We help customers select suitable electrodes and provide dependable product support.",
-    icon: Headphones,
+      "Practical assistance when selecting electrodes for your application.",
+    href: "/contact",
   },
 ];
+
+function FeatureIcon({ type }) {
+  if (type === "factory") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        className="h-16 w-16"
+        aria-hidden="true"
+      >
+        <path
+          d="M10 52V24l15 8V20l15 8V12h12v40H10Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M17 52V40h9v12m8 0V40h9v12M47 19h5"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M16 35h4m10 0h4m12 0h4"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "quality") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        className="h-16 w-16"
+        aria-hidden="true"
+      >
+        <path
+          d="m32 8 6 4 7-.5 2.5 6.5 6 4-2.5 6 2.5 6-6 4-2.5 6.5-7-.5-6 4-6-4-7 .5-2.5-6.5-6-4 2.5-6-2.5-6 6-4 2.5-6.5 7 .5 6-4Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="m23 31 6 6 12-13"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "arc") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        className="h-16 w-16"
+        aria-hidden="true"
+      >
+        <path
+          d="M35 6 17 34h15l-3 24 18-31H33l2-21Z"
+          stroke="currentColor"
+          strokeWidth="2.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M12 48h8m25-34 5-5M49 31h8"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "strength") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        className="h-16 w-16"
+        aria-hidden="true"
+      >
+        <path
+          d="M32 7 13 15v14c0 13 7.8 23 19 28 11.2-5 19-15 19-28V15L32 7Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="m22 31 7 7 14-15"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "delivery") {
+    return (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        className="h-16 w-16"
+        aria-hidden="true"
+      >
+        <path
+          d="M7 15h32v31H7V15Zm32 12h9l9 10v9H39V27Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M19 54a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm27 0a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"
+          stroke="currentColor"
+          strokeWidth="2.5"
+        />
+
+        <path
+          d="M13 23h18M7 32h21"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      className="h-16 w-16"
+      aria-hidden="true"
+    >
+      <path
+        d="M12 35v-7a20 20 0 0 1 40 0v7"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+
+      <path
+        d="M12 32h8v18h-5a3 3 0 0 1-3-3V32Zm40 0h-8v18h5a3 3 0 0 0 3-3V32Z"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="M44 51c-2 5-6 7-12 7h-4"
+        stroke="currentColor"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+      />
+
+      <circle cx="25" cy="58" r="2.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className="h-3.5 w-3.5 transition-transform duration-300 group-hover/link:translate-x-1"
+      aria-hidden="true"
+    >
+      <path
+        d="M5 12h14M13 6l6 6-6 6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export function Benefits() {
   return (
     <section
-      id="why-us"
-      className="relative overflow-hidden bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      id="benefits"
+      className="bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
     >
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute left-1/2 top-0 hidden h-72 w-72 -translate-x-1/2 rounded-full bg-orange-100/70 blur-3xl sm:block" />
-
-      <div className="relative mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         {/* Section heading */}
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
           <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
             <span className="h-px w-5 bg-orange-500" />
 
-            <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-orange-500 sm:text-xs">
+            <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-orange-500 sm:text-[10px]">
               Why Power Electrode Ltd
             </p>
           </div>
 
-          <h2 className="mt-4 text-[2rem] font-bold leading-[1.08] tracking-[-0.03em] text-slate-950 sm:text-4xl lg:text-5xl">
-            The Power Electrode Advantage
+          <h2 className="mt-4 text-3xl font-bold leading-[1.08] tracking-[-0.035em] text-[#102a4a] sm:text-4xl">
+            What Sets Our
+            <span className="block text-orange-500">Electrodes Apart</span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-7 text-slate-600 sm:text-lg">
-            We combine local manufacturing expertise with strict quality
-            standards to deliver strong, consistent and dependable welding
-            electrodes to professionals and industries across Ghana.
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
+            Dependable electrodes developed for consistent professional and
+            industrial welding performance.
           </p>
         </div>
 
-        {/* Benefit cards */}
-        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-5">
-          {benefits.map((benefit) => {
-            const Icon = benefit.icon;
+        {/* Benefits cards */}
+        <div className="grid justify-items-center gap-x-5 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9">
+          {advantages.map((advantage) => (
+            <article
+              key={advantage.title}
+              className="group w-full max-w-[250px] overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-[0_12px_32px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.13)] sm:max-w-[320px] lg:max-w-[350px]"
+            >
+              {/* Reduced navy visual area */}
+              <div className="relative flex h-[120px] items-center justify-center overflow-hidden bg-[#102a4a] text-orange-400 sm:h-[155px] lg:h-[170px]">
+                {/* Decorative circle */}
+                <div className="absolute -right-12 -top-12 h-28 w-28 rounded-full border border-white/10" />
 
-            return (
-              <article
-                key={benefit.title}
-                className="group relative overflow-hidden rounded-[18px] border border-slate-200 bg-white p-5 transition-all duration-300 hover:border-orange-200 sm:rounded-2xl sm:p-6 sm:shadow-[0_10px_28px_rgba(15,23,42,0.05)]"
-              >
-                {/* Orange hover line */}
-                <div className="absolute left-0 top-0 h-1 w-0 bg-orange-500 transition-all duration-500 group-hover:w-full" />
+                {/* Decorative circle */}
+                <div className="absolute -bottom-12 -left-12 h-28 w-28 rounded-full border border-white/10" />
 
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-orange-200 bg-orange-50 text-orange-500 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
-                  <Icon size={23} strokeWidth={2} />
+                {/* Feature icon */}
+                <div className="relative scale-[0.68] transition-transform duration-300 group-hover:scale-[0.74] sm:scale-[0.78] sm:group-hover:scale-[0.84]">
+                  <FeatureIcon type={advantage.icon} />
                 </div>
+              </div>
 
-                <h3 className="mt-5 text-lg font-bold text-slate-900 sm:text-xl">
-                  {benefit.title}
+              {/* White content area */}
+              <div className="flex min-h-[190px] flex-col items-center px-5 py-6 text-center sm:min-h-[220px] sm:px-7 lg:min-h-[235px]">
+                <h3 className="text-[13px] font-extrabold uppercase leading-5 tracking-[-0.025em] text-[#102a4a] sm:text-base">
+                  {advantage.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-6 text-slate-600 sm:text-[15px] sm:leading-7">
-                  {benefit.description}
+                <p className="mt-3 max-w-[250px] text-[11px] leading-[1.6] text-slate-600 sm:text-sm sm:leading-6">
+                  {advantage.description}
                 </p>
-              </article>
-            );
-          })}
-        </div>
-        <div className="relative mt-8 overflow-hidden rounded-[22px] bg-[#17375e] px-5 py-8 text-center sm:mt-10 sm:rounded-[24px] sm:px-8 sm:py-10 lg:px-10">
-          {/* Decorative circles */}
-          <div className="pointer-events-none absolute -bottom-16 -left-16 hidden h-36 w-36 rounded-full bg-white/10 sm:block sm:h-44 sm:w-44" />
 
-          <div className="pointer-events-none absolute -right-14 -top-16 hidden h-40 w-40 rounded-full bg-white/10 sm:block sm:h-48 sm:w-48" />
-
-          {/* Content */}
-          <div className="relative z-10 mx-auto max-w-3xl">
-            <h3 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
-              Ready to Work With Ghana&apos;s Trusted Welding Electrode
-              Manufacturer?
-            </h3>
-
-            <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/70 sm:text-base">
-              Whether you need welding electrodes for fabrication, construction,
-              maintenance or industrial applications, our team is ready to help.
-            </p>
-
-            <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="/contact"
-                className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-orange-600 sm:w-auto"
-              >
-                Send an Enquiry
-                <span aria-hidden="true">→</span>
-              </a>
-
-              <a
-                href="tel:+233244316183"
-                className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-xl border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:bg-white hover:text-[#17375e] sm:w-auto"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-4 w-4"
-                  aria-hidden="true"
+                <Link
+                  href={advantage.href}
+                  className="group/link mt-auto inline-flex min-h-10 items-center justify-center gap-2 rounded-full border border-orange-300 px-5 py-2 text-[11px] font-bold text-[#102a4a] transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:text-xs"
                 >
-                  <path
-                    d="M7.5 3.5H5.2c-.9 0-1.7.7-1.7 1.7 0 8.5 6.8 15.3 15.3 15.3.9 0 1.7-.7 1.7-1.7v-2.3c0-.8-.5-1.4-1.2-1.6l-3-.8c-.6-.2-1.3 0-1.7.5l-.7.9a13.1 13.1 0 0 1-5.4-5.4l.9-.7c.5-.4.7-1.1.5-1.7l-.8-3c-.2-.7-.8-1.2-1.6-1.2Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                Call Us Now
-              </a>
-            </div>
-          </div>
+                  Learn More
+                  <ArrowIcon />
+                </Link>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

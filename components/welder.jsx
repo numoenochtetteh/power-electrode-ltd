@@ -86,13 +86,14 @@ export function Welder() {
             </p>
 
             {/* Product features */}
-            <div className="space-y-3 pt-1">
-              {electrodeFeatures.map((feature) => (
-                <div
+            <div className="grid gap-3 pt-1">
+              {electrodeFeatures.map((feature, index) => (
+                <article
                   key={feature.title}
-                  className="flex gap-3.5 border-b border-slate-200 py-4 first:pt-2 last:border-b-0 sm:rounded-2xl sm:border sm:bg-white sm:p-4"
+                  className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-[#f8f9fb] p-4 transition-all duration-300 hover:border-orange-200 hover:bg-white hover:shadow-md sm:p-5"
                 >
-                  <div className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+                  {/* Check icon */}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50 text-orange-500">
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -107,19 +108,27 @@ export function Welder() {
                         strokeLinejoin="round"
                       />
                     </svg>
-                  </div>
+                  </span>
 
-                  <div>
-                    <p className="font-bold text-slate-900">{feature.title}</p>
+                  {/* Text */}
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-start justify-between gap-3">
+                      <h4 className="text-[15px] font-bold leading-5 text-slate-950 sm:text-base">
+                        {feature.title}
+                      </h4>
 
-                    <p className="mt-1 text-sm leading-6 text-slate-600">
+                      <span className="shrink-0 text-[10px] font-bold text-orange-400">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <p className="mt-1.5 text-[13px] leading-5 text-slate-600 sm:text-sm sm:leading-6">
                       {feature.description}
                     </p>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
-
             <a
               href="/products"
               className="mt-2 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#102a4a] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-500 sm:w-fit"
