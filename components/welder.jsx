@@ -1,17 +1,96 @@
 const electrodeFeatures = [
   {
-    title: "Consistent Arc Performance",
-    description: "Designed to provide smooth ignition and stable welding.",
+    icon: "quality",
+    title: "Proven Quality",
+    description:
+      "Carefully produced to deliver dependable professional welding results.",
   },
   {
-    title: "Strong and Reliable Welds",
-    description: "Manufactured for dependable strength and durability.",
+    icon: "arc",
+    title: "Stable Arc",
+    description:
+      "Designed for smooth ignition and consistent electrode operation.",
   },
   {
-    title: "Quality Manufacturing",
-    description: "Produced with careful quality and performance standards.",
+    icon: "strength",
+    title: "Strong Welds",
+    description:
+      "Engineered to support strength, durability and reliable performance.",
   },
 ];
+
+function FeatureIcon({ type }) {
+  if (type === "quality") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
+        <path
+          d="m12 3 2.1 1.4 2.5-.2.9 2.3 2.1 1.4-.9 2.1.9 2.1-2.1 1.4-.9 2.3-2.5-.2L12 17l-2.1-1.4-2.5.2-.9-2.3-2.1-1.4.9-2.1-.9-2.1 2.1-1.4.9-2.3 2.5.2L12 3Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="m8.5 10 2.2 2.2 4.8-5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "arc") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-5 w-5"
+        aria-hidden="true"
+      >
+        <path
+          d="M13 2 6.5 13H12l-1 9 6.5-12H12l1-8Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        <path
+          d="M4 17h3M17 5l2-2M18 13h3"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+      <path
+        d="M12 3 5 6v5.2c0 4.8 2.9 8.5 7 10.3 4.1-1.8 7-5.5 7-10.3V6l-7-3Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="m8.5 12 2.2 2.2 4.8-5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export function Welder() {
   return (
@@ -36,7 +115,7 @@ export function Welder() {
         {/* Video and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
           {/* Video */}
-          <div className="relative min-h-[420px] overflow-hidden rounded-[22px] bg-slate-950 sm:min-h-[460px] sm:rounded-[26px] md:min-h-[560px]">
+          <div className="relative min-h-[420px] overflow-hidden rounded-[22px] bg-slate-950 sm:min-h-[460px] sm:rounded-[26px] md:min-h-[540px]">
             <video
               className="absolute inset-0 h-full w-full scale-[1.85] object-cover object-center"
               autoPlay
@@ -67,8 +146,7 @@ export function Welder() {
           </div>
 
           {/* Right-side content */}
-          <div className="flex flex-col justify-center gap-5">
-            {/* Centred only on phones */}
+          <div className="flex flex-col justify-center gap-4">
             <div className="text-center sm:text-left">
               <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-orange-500 sm:text-xs">
                 Quality You Can Depend On
@@ -81,48 +159,34 @@ export function Welder() {
 
             <p className="text-center text-base leading-7 text-slate-600 sm:text-left sm:text-lg sm:leading-8">
               Our welding electrodes are manufactured to support reliable weld
-              quality across a wide range of metal fabrication and industrial
-              applications, with performance and ease of use in mind.
+              quality across metal fabrication and industrial applications.
             </p>
 
             {/* Product features */}
-            <div className="grid gap-3 pt-1">
+            <div className="grid gap-2.5 pt-1">
               {electrodeFeatures.map((feature, index) => (
                 <article
                   key={feature.title}
-                  className="group flex items-start gap-4 rounded-2xl border border-slate-200 bg-[#f8f9fb] p-4 transition-all duration-300 hover:border-orange-200 hover:bg-white hover:shadow-md sm:p-5"
+                  className="group flex items-center gap-3 rounded-xl border border-orange-200 bg-white px-3.5 py-3 shadow-[0_8px_22px_rgba(15,23,42,0.10)] transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-300 hover:shadow-[0_12px_28px_rgba(15,23,42,0.14)] sm:gap-4 sm:px-4 sm:py-3.5"
                 >
-                  {/* Check icon */}
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50 text-orange-500">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-5 w-5"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 12.5l4.2 4L19 7"
-                        stroke="currentColor"
-                        strokeWidth="2.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                  {/* Feature icon */}
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-orange-500">
+                    <FeatureIcon type={feature.icon} />
                   </span>
 
-                  {/* Text */}
+                  {/* Feature text */}
                   <div className="min-w-0 flex-1">
                     <div className="flex items-start justify-between gap-3">
-                      <h4 className="text-[15px] font-bold leading-5 text-slate-950 sm:text-base">
+                      <h4 className="text-[14px] font-bold leading-5 text-slate-950 sm:text-[15px]">
                         {feature.title}
                       </h4>
 
-                      <span className="shrink-0 text-[10px] font-bold text-orange-400">
+                      <span className="shrink-0 text-[9px] font-bold text-orange-400">
                         {String(index + 1).padStart(2, "0")}
                       </span>
                     </div>
 
-                    <p className="mt-1.5 text-[13px] leading-5 text-slate-600 sm:text-sm sm:leading-6">
+                    <p className="mt-1 text-[12px] leading-[1.55] text-slate-600 sm:text-[13px] sm:leading-5">
                       {feature.description}
                     </p>
                   </div>
@@ -131,10 +195,15 @@ export function Welder() {
             </div>
             <a
               href="/products"
-              className="mt-2 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#102a4a] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-500 sm:w-fit"
+              className="group mt-3 inline-flex min-h-10 w-[70%] max-w-[210px] self-center items-center justify-center gap-2 rounded-full bg-[#102a4a] px-5 py-2.5 text-[11px] font-bold text-white shadow-[0_8px_20px_rgba(16,42,74,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-500 hover:shadow-[0_10px_24px_rgba(249,115,22,0.22)] sm:min-h-12 sm:w-fit sm:max-w-none sm:self-start sm:gap-3 sm:px-7 sm:py-3 sm:text-sm"
             >
               Explore Our Products
-              <span aria-hidden="true">→</span>
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
             </a>
           </div>
         </div>

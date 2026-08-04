@@ -9,27 +9,6 @@ const advantages = [
     href: "/manufacturing",
   },
   {
-    icon: "quality",
-    title: "Proven Quality",
-    description:
-      "Carefully produced to deliver dependable professional welding results.",
-    href: "/manufacturing",
-  },
-  {
-    icon: "arc",
-    title: "Stable Arc",
-    description:
-      "Designed for smooth ignition and consistent electrode operation.",
-    href: "/products",
-  },
-  {
-    icon: "strength",
-    title: "Strong Welds",
-    description:
-      "Engineered to support strength, durability and reliable performance.",
-    href: "/products",
-  },
-  {
     icon: "delivery",
     title: "Reliable Supply",
     description:
@@ -51,7 +30,7 @@ function FeatureIcon({ type }) {
       <svg
         viewBox="0 0 64 64"
         fill="none"
-        className="h-16 w-16"
+        className="h-12 w-12"
         aria-hidden="true"
       >
         <path
@@ -78,90 +57,12 @@ function FeatureIcon({ type }) {
     );
   }
 
-  if (type === "quality") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        className="h-16 w-16"
-        aria-hidden="true"
-      >
-        <path
-          d="m32 8 6 4 7-.5 2.5 6.5 6 4-2.5 6 2.5 6-6 4-2.5 6.5-7-.5-6 4-6-4-7 .5-2.5-6.5-6-4 2.5-6-2.5-6 6-4 2.5-6.5 7 .5 6-4Z"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="m23 31 6 6 12-13"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-
-  if (type === "arc") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        className="h-16 w-16"
-        aria-hidden="true"
-      >
-        <path
-          d="M35 6 17 34h15l-3 24 18-31H33l2-21Z"
-          stroke="currentColor"
-          strokeWidth="2.8"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M12 48h8m25-34 5-5M49 31h8"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    );
-  }
-
-  if (type === "strength") {
-    return (
-      <svg
-        viewBox="0 0 64 64"
-        fill="none"
-        className="h-16 w-16"
-        aria-hidden="true"
-      >
-        <path
-          d="M32 7 13 15v14c0 13 7.8 23 19 28 11.2-5 19-15 19-28V15L32 7Z"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="m22 31 7 7 14-15"
-          stroke="currentColor"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </svg>
-    );
-  }
-
   if (type === "delivery") {
     return (
       <svg
         viewBox="0 0 64 64"
         fill="none"
-        className="h-16 w-16"
+        className="h-12 w-12"
         aria-hidden="true"
       >
         <path
@@ -171,11 +72,9 @@ function FeatureIcon({ type }) {
           strokeLinejoin="round"
         />
 
-        <path
-          d="M19 54a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm27 0a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"
-          stroke="currentColor"
-          strokeWidth="2.5"
-        />
+        <circle cx="19" cy="47" r="7" stroke="currentColor" strokeWidth="2.5" />
+
+        <circle cx="47" cy="47" r="7" stroke="currentColor" strokeWidth="2.5" />
 
         <path
           d="M13 23h18M7 32h21"
@@ -191,7 +90,7 @@ function FeatureIcon({ type }) {
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      className="h-16 w-16"
+      className="h-12 w-12"
       aria-hidden="true"
     >
       <path
@@ -247,7 +146,7 @@ export function Benefits() {
     >
       <div className="mx-auto max-w-6xl">
         {/* Section heading */}
-        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-14">
+        <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
           <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
             <span className="h-px w-5 bg-orange-500" />
 
@@ -262,45 +161,42 @@ export function Benefits() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-xl text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
-            Dependable electrodes developed for consistent professional and
-            industrial welding performance.
+            Local manufacturing, reliable supply and practical support for
+            professional welding requirements.
           </p>
         </div>
 
-        {/* Benefits cards */}
-        <div className="grid justify-items-center gap-x-5 gap-y-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-7 lg:gap-y-9">
+        {/* Cards */}
+        <div className="grid justify-items-center gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
           {advantages.map((advantage) => (
             <article
               key={advantage.title}
-              className="group w-full max-w-[250px] overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-[0_12px_32px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.13)] sm:max-w-[320px] lg:max-w-[350px]"
+              className="group w-full max-w-[280px] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.14)] sm:max-w-[250px] md:max-w-[290px] lg:max-w-[320px]"
             >
-              {/* Reduced navy visual area */}
-              <div className="relative flex h-[120px] items-center justify-center overflow-hidden bg-[#102a4a] text-orange-400 sm:h-[155px] lg:h-[170px]">
-                {/* Decorative circle */}
+              {/* Tall navy visual area */}
+              <div className="relative flex h-36 items-center justify-center overflow-hidden bg-[#102a4a] text-orange-400 sm:h-40 lg:h-44">
                 <div className="absolute -right-12 -top-12 h-28 w-28 rounded-full border border-white/10" />
 
-                {/* Decorative circle */}
                 <div className="absolute -bottom-12 -left-12 h-28 w-28 rounded-full border border-white/10" />
 
-                {/* Feature icon */}
-                <div className="relative scale-[0.68] transition-transform duration-300 group-hover:scale-[0.74] sm:scale-[0.78] sm:group-hover:scale-[0.84]">
+                <div className="relative transition-transform duration-300 group-hover:scale-105">
                   <FeatureIcon type={advantage.icon} />
                 </div>
               </div>
 
               {/* White content area */}
-              <div className="flex min-h-[190px] flex-col items-center px-5 py-6 text-center sm:min-h-[220px] sm:px-7 lg:min-h-[235px]">
-                <h3 className="text-[13px] font-extrabold uppercase leading-5 tracking-[-0.025em] text-[#102a4a] sm:text-base">
+              <div className="flex min-h-[165px] flex-col items-center px-4 py-5 text-center sm:min-h-[180px] sm:px-5 sm:py-6 lg:min-h-[195px]">
+                <h3 className="text-[12px] font-extrabold leading-4 text-[#102a4a] sm:text-sm lg:text-base">
                   {advantage.title}
                 </h3>
 
-                <p className="mt-3 max-w-[250px] text-[11px] leading-[1.6] text-slate-600 sm:text-sm sm:leading-6">
+                <p className="mt-3 max-w-[240px] text-[10px] leading-[1.5] text-slate-600 sm:text-xs sm:leading-5 lg:text-[13px]">
                   {advantage.description}
                 </p>
 
                 <Link
                   href={advantage.href}
-                  className="group/link mt-auto inline-flex min-h-10 items-center justify-center gap-2 rounded-full border border-orange-300 px-5 py-2 text-[11px] font-bold text-[#102a4a] transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:text-xs"
+                  className="group/link mt-auto inline-flex min-h-9 items-center justify-center gap-2 rounded-full border border-orange-300 px-4 py-2 text-[10px] font-bold text-[#102a4a] transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:text-[11px]"
                 >
                   Learn More
                   <ArrowIcon />

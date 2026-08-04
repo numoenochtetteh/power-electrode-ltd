@@ -44,10 +44,9 @@ export function ManufacturingDivisions() {
             dependable welding electrodes.
           </p>
 
-          {/* About page button */}
           <a
             href="/manufacturing"
-            className="group mt-6 inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+            className="group mt-6 inline-flex min-h-10 w-[75%] max-w-[230px] items-center justify-center gap-2 rounded-full bg-orange-500 px-5 py-2.5 text-[10px] font-bold text-white shadow-[0_8px_20px_rgba(249,115,22,0.18)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-orange-600 hover:shadow-[0_10px_24px_rgba(249,115,22,0.25)] sm:min-h-12 sm:w-fit sm:max-w-none sm:gap-3 sm:px-7 sm:py-3 sm:text-sm"
           >
             Learn More About Our Process
             <ArrowIcon />
@@ -55,25 +54,26 @@ export function ManufacturingDivisions() {
         </div>
 
         {/* Manufacturing video */}
-        <div className="relative overflow-hidden rounded-[22px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[30px]">
+        <div className="relative overflow-hidden rounded-[1px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[1px]">
           <video
-            className="h-[360px] w-full object-cover sm:h-[380px] lg:h-[480px]"
+            className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[500px]"
             autoPlay
             muted
             loop
             playsInline
             preload="metadata"
+            aria-label="Power Electrode Ltd manufacturing process"
           >
             <source src="/video/vid1.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
 
           {/* Video overlay */}
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
 
           {/* Video information */}
           <div className="pointer-events-none absolute bottom-0 left-0 right-0 p-5 text-white sm:p-8 lg:p-10">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-400">
+            <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-orange-400 sm:text-xs">
               Power Electrode Ltd
             </p>
 
