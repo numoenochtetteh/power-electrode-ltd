@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
   title: "About Us | Power Electrode Ltd",
@@ -103,50 +104,18 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      {/* About hero */}
-      <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
-        <div className="relative mx-auto min-h-[360px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[410px] lg:rounded-[34px]">
-          <img
-            src="/images/frame3.jpg"
-            alt="Power Electrode Ltd welding operations"
-            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
-          />
-
-          <div className="absolute inset-0 bg-black/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/38 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" />
-
-          <div className="relative z-10 mx-auto flex min-h-[360px] max-w-7xl items-end px-6 py-9 sm:min-h-[410px] sm:items-center sm:px-10 lg:px-14">
-            <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-400">
-                Power Electrode Ltd
-              </p>
-
-              <h1 className="mt-3 text-4xl font-bold tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
-                About Us
-              </h1>
-
-              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
-                Building a dependable Ghanaian welding electrode brand focused
-                on strength, consistency and quality manufacturing.
-              </p>
-
-              <div className="mt-6 flex items-center gap-2 text-xs text-white/65 sm:text-sm">
-                <Link
-                  href="/"
-                  className="transition-colors hover:text-orange-400"
-                >
-                  Home
-                </Link>
-
-                <span>/</span>
-
-                <span className="text-white">About Us</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/frame3.jpg"
+        imageAlt="Power Electrode Ltd welding operations"
+        imagePosition="58% center"
+        eyebrow="Power Electrode Ltd"
+        title="About Us"
+        description="Building a dependable Ghanaian welding electrode brand focused on strength, consistency and quality manufacturing."
+        actions={[
+          { label: "Contact Our Team", href: "/contact" },
+          { label: "View Products", href: "/products", variant: "secondary" },
+        ]}
+      />
 
       {/* Who we are */}
       <section className="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">

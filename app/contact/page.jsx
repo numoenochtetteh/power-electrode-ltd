@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ContactEnquiryForm } from "@/components/contact-enquiry-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
   title: "Contact Us | Power Electrode Ltd",
@@ -24,16 +25,16 @@ const contactDetails = [
     detail: "North Dawhenya",
     description:
       "Central University 282, Ningo Prampram, Greater Accra, Ghana.",
-    href: "https://www.google.com/maps/search/?api=1&query=GN-0282-3548",
+    href: "https://www.google.com/maps/search/?api=1&query=North+Dawhenya+Central+University+282+Ningo+Prampram+Greater+Accra+Ghana",
     action: "Get directions",
   },
   {
     number: "03",
-    title: "GhanaPost GPS",
-    detail: "GN-0282-3548",
-    description: "Use our digital address to locate Power Electrode Ltd.",
-    href: "https://www.google.com/maps/search/?api=1&query=GN-0282-3548",
-    action: "Open location",
+    title: "Email Our Team",
+    detail: "info@powerelectrode.net",
+    description: "Send us your product enquiries, quotation requests and order details.",
+    href: "mailto:info@powerelectrode.net",
+    action: "Send an email",
   },
 ];
 
@@ -61,54 +62,23 @@ export default function ContactPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      {/* Contact hero */}
-      <section className="px-3 pb-6 pt-1 sm:px-5 sm:pb-8 lg:px-8">
-        <div className="relative mx-auto min-h-[420px] max-w-[1800px] overflow-hidden rounded-[28px] bg-slate-950 sm:min-h-[450px] lg:rounded-[34px]">
-          <img
-            src="/images/frame4.jpg"
-            alt="Contact Power Electrode Ltd"
-            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
-          />
-
-          <div className="absolute inset-0 bg-black/15" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
-          <div className="relative z-10 mx-auto flex min-h-[420px] max-w-7xl items-end px-6 py-9 sm:min-h-[450px] sm:items-center sm:px-10 lg:px-14">
-            <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
-                Get in Touch
-              </p>
-
-              <h1 className="mt-3 text-4xl font-bold leading-[1.03] tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
-                Let&apos;s Discuss Your Welding Requirements
-              </h1>
-
-              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
-                Contact Power Electrode Ltd for product information, quotations,
-                bulk orders and electrode recommendations.
-              </p>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="tel:+233244316183"
-                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
-                >
-                  Call +233 244 316 183
-                </a>
-
-                <a
-                  href="#enquiry"
-                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/30 bg-black/15 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
-                >
-                  Send an Enquiry
-                  <ArrowIcon />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/frame4.jpg"
+        imageAlt="Contact Power Electrode Ltd"
+        imagePosition="58% center"
+        eyebrow="Get in Touch"
+        title="Let's Discuss Your Welding Requirements"
+        description="Contact Power Electrode Ltd for product information, quotations, bulk orders and electrode recommendations."
+        actions={[
+          { label: "Send an Enquiry", href: "#enquiry" },
+          {
+            label: "Call +233 244 316 183",
+            href: "tel:+233244316183",
+            variant: "secondary",
+            icon: "phone",
+          },
+        ]}
+      />
 
       {/* Contact details */}
       <section className="px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
@@ -233,18 +203,21 @@ export default function ContactPage() {
 
             <div className="md:text-right">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                GhanaPost GPS
+                Company Email
               </p>
 
-              <p className="mt-2 text-2xl font-bold text-[#102a4a]">
-                GN-0282-3548
-              </p>
+              <a
+                href="mailto:info@powerelectrode.net"
+                className="mt-2 inline-block break-all text-lg font-bold text-[#102a4a] transition-colors hover:text-orange-500 sm:text-2xl"
+              >
+                info@powerelectrode.net
+              </a>
             </div>
           </div>
 
           <div className="mt-8 overflow-hidden rounded-[24px] border border-slate-200 bg-slate-100 p-2 shadow-[0_15px_45px_rgba(15,23,42,0.08)]">
             <iframe
-              src="https://www.google.com/maps?q=GN-0282-3548&output=embed"
+              src="https://www.google.com/maps?q=North%20Dawhenya%20Central%20University%20282%20Ningo%20Prampram%20Greater%20Accra%20Ghana&output=embed"
               title="Power Electrode Ltd location"
               className="h-[400px] w-full rounded-[18px] border-0 sm:h-[500px]"
               loading="lazy"
@@ -255,7 +228,7 @@ export default function ContactPage() {
 
           <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
             <a
-              href="https://www.google.com/maps/search/?api=1&query=GN-0282-3548"
+              href="https://www.google.com/maps/search/?api=1&query=North+Dawhenya+Central+University+282+Ningo+Prampram+Greater+Accra+Ghana"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-[#102a4a] px-7 py-4 font-semibold text-white transition-colors hover:bg-orange-500 sm:w-fit"

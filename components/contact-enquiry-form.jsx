@@ -43,7 +43,7 @@ Requirements:
 ${form.message}
     `.trim();
 
-    const whatsappUrl = `https://wa.me/233244316183?text=${encodeURIComponent(
+    const whatsappUrl = `https://wa.me/233200594776?text=${encodeURIComponent(
       whatsappMessage,
     )}`;
 

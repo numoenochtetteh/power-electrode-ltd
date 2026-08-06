@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
   title: "Welding Electrodes | Power Electrode Ltd",
@@ -99,79 +100,28 @@ function ArrowIcon() {
   );
 }
 
-function PhoneIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
-      <path
-        d="M7.5 3.5H5.2c-.9 0-1.7.7-1.7 1.7 0 8.5 6.8 15.3 15.3 15.3.9 0 1.7-.7 1.7-1.7v-2.3c0-.8-.5-1.4-1.2-1.6l-3-.8c-.6-.2-1.3 0-1.7.5l-.7.9a13.1 13.1 0 0 1-5.4-5.4l.9-.7c.5-.4.7-1.1.5-1.7l-.8-3c-.2-.7-.8-1.2-1.6-1.2Z"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
 
-      {/* Product hero */}
-      <section className="px-3 pb-5 pt-1 sm:px-5 sm:pb-7 lg:px-8">
-        <div className="relative mx-auto min-h-[450px] max-w-[1800px] overflow-hidden rounded-none bg-slate-950 sm:min-h-[500px] sm:rounded-[28px] lg:rounded-[34px]">
-          <img
-            src="/images/frame1.jpg"
-            alt="Power Electrode Ltd welding electrodes"
-            className="absolute inset-0 h-full w-full object-cover object-[58%_center] sm:object-center"
-          />
-
-          {/* Image overlays */}
-          <div className="absolute inset-0 bg-black/15" />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/72 via-black/40 to-black/10" />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
-
-          {/* Hero content */}
-          <div className="relative z-10 mx-auto flex min-h-[450px] max-w-7xl items-end px-6 py-9 sm:min-h-[500px] sm:items-center sm:px-10 lg:px-14">
-            <div className="max-w-3xl">
-              <p className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">
-                Power Electrode Ltd Products
-              </p>
-
-              <h1 className="mt-4 text-4xl font-bold tracking-[-0.035em] text-white sm:text-5xl lg:text-6xl">
-                Welding Electrodes
-              </h1>
-
-              <p className="mt-4 max-w-2xl text-[15px] leading-7 text-white/85 sm:text-lg sm:leading-8">
-                Quality welding electrodes manufactured for fabrication,
-                maintenance, construction and industrial welding applications
-                across Ghana.
-              </p>
-
-              <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="group inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-orange-500 px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-orange-600 sm:w-fit"
-                >
-                  Send an Enquiry
-                  <ArrowIcon />
-                </Link>
-
-                <a
-                  href="tel:+233244316183"
-                  className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full border border-white/35 bg-black/15 px-7 py-3 text-sm font-bold text-white backdrop-blur-sm transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
-                >
-                  <PhoneIcon />
-                  Call +233 244 316 183
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        image="/images/frame1.jpg"
+        imageAlt="Power Electrode Ltd welding electrodes"
+        imagePosition="58% center"
+        eyebrow="Power Electrode Ltd Products"
+        title="Welding Electrodes"
+        description="Quality welding electrodes manufactured for fabrication, maintenance, construction and industrial welding applications across Ghana."
+        actions={[
+          { label: "Send an Enquiry", href: "/contact" },
+          {
+            label: "Call +233 244 316 183",
+            href: "tel:+233244316183",
+            variant: "secondary",
+            icon: "phone",
+          },
+        ]}
+      />
 
       {/* Product cards */}
       <section

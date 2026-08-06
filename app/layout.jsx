@@ -1,5 +1,6 @@
 import { Inter, Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 import "./globals.css";
 
 const inter = Inter({
@@ -30,6 +31,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         {children}
+
+        <WhatsAppButton />
 
         {process.env.NODE_ENV === "production" && <Analytics />}
       </body>

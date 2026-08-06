@@ -23,8 +23,22 @@ const footerLinks = [
     links: [
       { name: "Product Enquiries", href: "/contact" },
       { name: "Call +233 244 316 183", href: "tel:+233244316183" },
+      { name: "WhatsApp +233 20 059 4776", href: "https://wa.me/233200594776" },
+      { name: "info@powerelectrode.net", href: "mailto:info@powerelectrode.net" },
       { name: "Get Directions", href: "/contact#location" },
     ],
+  },
+];
+
+const socialLinks = [
+  { name: "Facebook", type: "facebook", href: null },
+  { name: "Instagram", type: "instagram", href: null },
+  { name: "LinkedIn", type: "linkedin", href: null },
+  { name: "YouTube", type: "youtube", href: null },
+  {
+    name: "WhatsApp",
+    type: "whatsapp",
+    href: "https://wa.me/233200594776",
   },
 ];
 
@@ -44,6 +58,46 @@ function ArrowIcon() {
         strokeLinejoin="round"
       />
     </svg>
+  );
+}
+
+function SocialIcon({ type }) {
+  if (type === "facebook") {
+    return <path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v2H6v4h3v7h4v-7h3.5l.5-4h-4V9c0-.7.3-1 1-1Z" fill="currentColor" />;
+  }
+
+  if (type === "instagram") {
+    return (
+      <>
+        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="2" />
+        <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+      </>
+    );
+  }
+
+  if (type === "linkedin") {
+    return (
+      <>
+        <path d="M6 9v10M6 5.5v.1M10.5 19v-6c0-2.2 1.4-3.5 3.4-3.5 2.2 0 3.6 1.4 3.6 4V19M10.5 10v9" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+      </>
+    );
+  }
+
+  if (type === "youtube") {
+    return (
+      <>
+        <path d="M21 12c0 2.2-.3 4.3-.7 5-.3.8-1 1.4-1.8 1.6-1.4.4-5 .4-6.5.4s-5.1 0-6.5-.4c-.8-.2-1.5-.8-1.8-1.6-.4-.7-.7-2.8-.7-5s.3-4.3.7-5c.3-.8 1-1.4 1.8-1.6C6.9 5 10.5 5 12 5s5.1 0 6.5.4c.8.2 1.5.8 1.8 1.6.4.7.7 2.8.7 5Z" stroke="currentColor" strokeWidth="1.8" />
+        <path d="m10 9 5 3-5 3V9Z" fill="currentColor" />
+      </>
+    );
+  }
+
+  return (
+    <>
+      <path d="M20 11.5a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.5Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+      <path d="M9 8.5c.3 2.7 2 4.5 4.8 5.2l1-1.2c.2-.2.5-.3.8-.2l1.7.8" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+    </>
   );
 }
 
@@ -134,6 +188,47 @@ export function Footer() {
                 Proudly serving customers across Ghana
               </span>
             </div>
+
+            <div className="mt-6">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
+                Connect With Us
+              </p>
+
+              <div className="mt-3 flex flex-wrap gap-2.5">
+                {socialLinks.map((social) => {
+                  const classes =
+                    "flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400 hover:bg-orange-500 hover:text-white";
+
+                  const icon = (
+                    <svg viewBox="0 0 24 24" fill="none" className="h-[18px] w-[18px]" aria-hidden="true">
+                      <SocialIcon type={social.type} />
+                    </svg>
+                  );
+
+                  return social.href ? (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                      className={classes}
+                    >
+                      {icon}
+                    </a>
+                  ) : (
+                    <span
+                      key={social.name}
+                      title={`${social.name} link coming soon`}
+                      aria-label={`${social.name} link coming soon`}
+                      className={`${classes} cursor-default hover:translate-y-0 hover:border-white/15 hover:bg-white/5 hover:text-white/70`}
+                    >
+                      {icon}
+                    </span>
+                  );
+                })}
+              </div>
+            </div>
           </div>
 
           {/* Footer navigation */}
@@ -150,6 +245,8 @@ export function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
+                      target={link.href.startsWith("http") ? "_blank" : undefined}
+                      rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                       className="group inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-orange-400"
                     >
                       <span className="h-1 w-1 rounded-full bg-white/30 transition-colors group-hover:bg-orange-400" />
