@@ -96,7 +96,7 @@ export default function ManufacturingPage() {
         imageAlt="Power Electrode Ltd manufacturing facility"
         imagePosition="58% center"
         eyebrow="Power Electrode Ltd Manufacturing"
-        title="Precision at Every Stage of Production"
+        title="Our Factory"
         description="Explore how raw materials are prepared, processed, coated, finished and packaged to produce dependable welding electrodes."
         actions={[
           { label: "Watch the Process", href: "#process-video" },
@@ -131,8 +131,8 @@ export default function ManufacturingPage() {
           <div className="mx-auto mt-6 max-w-3xl text-center">
             <p className="text-base leading-7 text-slate-700 sm:text-lg sm:leading-8">
               See how carefully prepared core wire and coating materials move
-              through controlled production, inspection and packaging to
-              become dependable welding electrodes.
+              through controlled production, inspection and packaging to become
+              dependable welding electrodes.
             </p>
           </div>
 
@@ -216,7 +216,6 @@ export default function ManufacturingPage() {
               </article>
             ))}
           </div>
-
         </div>
       </section>
 

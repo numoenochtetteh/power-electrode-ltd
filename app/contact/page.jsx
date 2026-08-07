@@ -32,7 +32,8 @@ const contactDetails = [
     number: "03",
     title: "Email Our Team",
     detail: "info@powerelectrode.net",
-    description: "Send us your product enquiries, quotation requests and order details.",
+    description:
+      "Send us your product enquiries, quotation requests and order details.",
     href: "mailto:info@powerelectrode.net",
     action: "Send an email",
   },
@@ -67,7 +68,7 @@ export default function ContactPage() {
         imageAlt="Contact Power Electrode Ltd"
         imagePosition="58% center"
         eyebrow="Get in Touch"
-        title="Let's Discuss Your Welding Requirements"
+        title="Contact Us"
         description="Contact Power Electrode Ltd for product information, quotations, bulk orders and electrode recommendations."
         actions={[
           { label: "Send an Enquiry", href: "#enquiry" },

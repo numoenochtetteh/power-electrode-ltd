@@ -11,28 +11,40 @@ export const metadata = {
 
 const values = [
   {
-    number: "01",
+    category: "QUALITY",
     title: "Quality First",
     description:
       "We focus on producing dependable welding electrodes through careful material selection and controlled manufacturing.",
+    video: "/video/vid1.mp4",
+    action: "Contact Us",
+    href: "/contact",
   },
   {
-    number: "02",
+    category: "PERFORMANCE",
     title: "Consistent Performance",
     description:
       "Our products are developed to support stable arc performance and reliable welding results.",
+    video: "/video/vid1.mp4",
+    action: "View Products",
+    href: "/products",
   },
   {
-    number: "03",
+    category: "CUSTOMER FOCUS",
     title: "Customer Focus",
     description:
       "We listen to our customers and work to provide products that support their welding requirements.",
+    video: "/video/vid1.mp4",
+    action: "Request a Quote",
+    href: "/contact",
   },
   {
-    number: "04",
+    category: "IMPROVEMENT",
     title: "Continuous Improvement",
     description:
       "We are committed to improving our processes, products and customer experience as the company grows.",
+    video: "/video/vid1.mp4",
+    action: "Our Manufacturing",
+    href: "/manufacturing",
   },
 ];
 
@@ -66,20 +78,6 @@ const processSteps = [
   "Inspection and packaging",
 ];
 
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden="true">
-      <path
-        d="M5 12.5l4.2 4L19 7"
-        stroke="currentColor"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 function ArrowIcon() {
   return (
     <svg
@@ -104,6 +102,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
+      {/* HERO */}
       <PageHero
         image="/images/frame3.jpg"
         imageAlt="Power Electrode Ltd welding operations"
@@ -112,14 +111,22 @@ export default function AboutPage() {
         title="About Us"
         description="Building a dependable Ghanaian welding electrode brand focused on strength, consistency and quality manufacturing."
         actions={[
-          { label: "Contact Our Team", href: "/contact" },
-          { label: "View Products", href: "/products", variant: "secondary" },
+          {
+            label: "Contact Our Team",
+            href: "/contact",
+          },
+          {
+            label: "View Products",
+            href: "/products",
+            variant: "secondary",
+          },
         ]}
       />
 
-      {/* Who we are */}
+      {/* WHO WE ARE */}
       <section className="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
+          {/* LEFT CONTENT */}
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
               <span className="h-px w-5 bg-orange-500" />
@@ -153,6 +160,7 @@ export default function AboutPage() {
               and dependable service.
             </p>
 
+            {/* INFO BOXES */}
             <div className="mt-8 grid grid-cols-2 gap-4">
               <div className="rounded-2xl border border-slate-200 bg-[#f7f8fa] p-5">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-500">
@@ -176,21 +184,31 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative min-h-[400px] overflow-hidden rounded-[26px] sm:min-h-[520px]">
-            <img
-              src="/images/pic2.jpg"
-              alt="Power Electrode Ltd welding electrodes"
+          {/* RIGHT VIDEO */}
+          <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-slate-950 sm:h-[570px] lg:h-[620px]">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
               className="absolute inset-0 h-full w-full object-cover"
-            />
+            >
+              <source src="/video/vid1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/75 via-transparent to-transparent" />
+            {/* Video overlays */}
+            <div className="absolute inset-0 bg-black/10" />
 
-            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071a31]/50 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/90 via-[#071a31]/10 to-black/10" />
+
+            {/* Video content box */}
+            <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071a31]/75 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
                 Our Purpose
               </p>
 
-              <p className="mt-2 text-xl font-bold sm:text-2xl">
+              <p className="mt-2 text-xl font-bold leading-snug sm:text-2xl">
                 Manufacturing products welding professionals can depend on
               </p>
             </div>
@@ -198,51 +216,101 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* OUR VALUES */}
       <section
         id="quality"
-        className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24"
+        className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
       >
         <div className="mx-auto max-w-7xl">
+          {/* HEADING */}
           <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
+            <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-500">
               Our Values
             </p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
               What Drives Us
             </h2>
 
-            <p className="mx-auto mt-4 max-w-2xl leading-7 text-slate-600">
+            <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
               The principles shaping how we manufacture our products, serve our
               customers and grow Power Electrode Ltd.
             </p>
+
+            <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-orange-400" />
           </div>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* VIDEO VALUE CARDS */}
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
               <article
-                key={value.number}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
+                key={value.title}
+                className="group relative min-h-[480px] overflow-hidden bg-[#071a31] shadow-[0_18px_45px_rgba(15,23,42,0.14)]"
               >
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-orange-50 text-sm font-bold text-orange-500 transition-colors group-hover:bg-orange-500 group-hover:text-white">
-                  {value.number}
-                </span>
+                {/* Background video */}
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                >
+                  <source src={value.video} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
 
-                <h3 className="mt-5 text-lg font-bold text-slate-900">
-                  {value.title}
-                </h3>
+                {/* Video overlays */}
+                <div className="absolute inset-0 bg-black/15" />
 
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  {value.description}
-                </p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/5" />
+
+                {/* Top category */}
+                <div className="absolute left-5 top-0 max-w-[90%] bg-orange-400 px-5 py-3">
+                  <p className="text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#071a31]">
+                    {value.category}
+                  </p>
+                </div>
+
+                {/* Card content */}
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <h3 className="text-2xl font-bold leading-tight text-white">
+                    {value.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm leading-6 text-white/75">
+                    {value.description}
+                  </p>
+
+                  {/* CTA */}
+                  <Link
+                    href={value.href}
+                    className="group/button mt-6 inline-flex items-center gap-2 border-b border-orange-400 pb-1 text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors hover:text-orange-400"
+                  >
+                    {value.action}
+
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-4 w-4 transition-transform duration-300 group-hover/button:translate-x-1"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 12h14M13 6l6 6-6 6"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </Link>
+                </div>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Mission, vision and commitment */}
+      {/* MISSION, VISION AND COMMITMENT */}
       <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto max-w-3xl text-center">
@@ -280,10 +348,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Manufacturing process */}
+      {/* MANUFACTURING PROCESS */}
       <section className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-7xl">
           <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+            {/* LEFT */}
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
                 Our Manufacturing Process
@@ -300,22 +369,36 @@ export default function AboutPage() {
               </p>
 
               <Link
-                href="/products"
+                href="/manufacturing"
                 className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
               >
-                Explore Our Products
+                See How We Manufacture
                 <ArrowIcon />
               </Link>
             </div>
 
+            {/* RIGHT PROCESS STEPS */}
             <div className="grid gap-4 sm:grid-cols-2">
-              {processSteps.map((step, index) => (
+              {processSteps.map((step) => (
                 <div
                   key={step}
-                  className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5"
+                  className="group flex min-h-[88px] items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 text-sm font-bold text-orange-500">
-                    {String(index + 1).padStart(2, "0")}
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50 text-orange-500 transition-colors group-hover:bg-orange-500 group-hover:text-white">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      className="h-4 w-4"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 12.5l4.2 4L19 7"
+                        stroke="currentColor"
+                        strokeWidth="2.4"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
                   </span>
 
                   <p className="font-semibold text-slate-900">{step}</p>
@@ -326,64 +409,44 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Quality commitment */}
+      {/* FINAL CTA */}
       <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-5xl rounded-[28px] border border-slate-200 bg-white p-6 shadow-[0_20px_60px_rgba(15,23,42,0.08)] sm:p-10 lg:p-12">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
-              Our Commitment
-            </p>
-
-            <h2 className="mt-4 text-3xl font-bold text-slate-900 sm:text-4xl">
-              Focused on Quality and Reliability
-            </h2>
-          </div>
-
-          <div className="mt-9 grid gap-4 sm:grid-cols-2">
-            {[
-              "Careful material preparation",
-              "Consistent manufacturing processes",
-              "Product inspection before packaging",
-              "Dependable customer support",
-            ].map((item) => (
-              <div
-                key={item}
-                className="flex items-center gap-3 rounded-xl bg-[#f7f8fa] p-4"
-              >
-                <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-100 text-orange-500">
-                  <CheckIcon />
-                </span>
-
-                <p className="text-sm font-medium text-slate-700">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10 lg:px-14">
           <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/5" />
+
           <div className="absolute -bottom-20 -left-16 h-52 w-52 rounded-full bg-white/5" />
 
           <div className="relative mx-auto max-w-3xl">
-            <h2 className="text-3xl font-bold text-white sm:text-4xl">
-              Let&apos;s Build Stronger Welds Together
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-400">
+              Work With Power Electrode Ltd
+            </p>
+
+            <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl">
+              Dependable Electrodes for Serious Welding
             </h2>
 
             <p className="mx-auto mt-4 max-w-2xl leading-7 text-white/65">
-              Contact Power Electrode Ltd to discuss product enquiries, supply
+              Speak with our team about product enquiries, availability, supply
               requirements and bulk welding electrode orders.
             </p>
 
-            <Link
-              href="/contact"
-              className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
-            >
-              Contact Our Team
-              <ArrowIcon />
-            </Link>
+            <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+              <Link
+                href="/contact"
+                className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
+              >
+                Contact Our Team
+                <ArrowIcon />
+              </Link>
+
+              <Link
+                href="/products"
+                className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-xl border border-white/25 bg-white/10 px-7 py-4 font-semibold text-white transition-colors hover:bg-white hover:text-[#102a4a] sm:w-fit"
+              >
+                View Products
+                <ArrowIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </section>

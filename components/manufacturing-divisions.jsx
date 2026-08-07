@@ -78,7 +78,7 @@ export function ManufacturingDivisions() {
             </p>
 
             <h3 className="mt-2 max-w-2xl text-xl font-bold leading-tight sm:text-2xl lg:text-3xl">
-              Precision at Every Stage of Production
+              Our Factory
             </h3>
 
             <p className="mt-2 hidden max-w-xl text-sm leading-6 text-white/75 sm:block sm:text-base">

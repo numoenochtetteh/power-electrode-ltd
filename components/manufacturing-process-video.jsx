@@ -47,20 +47,15 @@ export function ManufacturingProcessVideo() {
   }
 
   return (
-    <div className="relative overflow-hidden rounded-[22px] bg-[#071a31] shadow-[0_20px_60px_rgba(15,23,42,0.16)]">
+    <div className="relative h-[560px] overflow-hidden rounded-[28px] bg-black sm:h-[430px] lg:h-[500px]">
       <video
         ref={videoRef}
-        className="aspect-video w-full object-cover"
         autoPlay
         muted
         loop
         playsInline
-        preload="auto"
-        poster="/images/pic2.jpg"
-        disablePictureInPicture
-        controls={false}
-        onCanPlay={keepVideoPlaying}
-        onEnded={keepVideoPlaying}
+        onPause={keepVideoPlaying}
+        className="h-full w-full object-cover"
       >
         <source src="/video/vid1.mp4" type="video/mp4" />
         Your browser does not support the video tag.
