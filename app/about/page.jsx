@@ -54,28 +54,22 @@ const beliefs = [
     title: "Dependable Products",
     description:
       "To manufacture reliable welding electrodes that help professionals achieve strong and consistent welding results.",
+    icon: "target",
   },
   {
     label: "Our Vision",
     title: "A Trusted Ghanaian Brand",
     description:
       "To become a trusted welding electrode brand serving professionals, businesses and industries throughout Ghana and beyond.",
+    icon: "eye",
   },
   {
     label: "Our Commitment",
     title: "Quality at Every Stage",
     description:
       "To maintain care, consistency and responsibility throughout our manufacturing and customer-service processes.",
+    icon: "shield",
   },
-];
-
-const processSteps = [
-  "Material selection",
-  "Core wire preparation",
-  "Flux preparation",
-  "Electrode coating",
-  "Drying and finishing",
-  "Inspection and packaging",
 ];
 
 function ArrowIcon() {
@@ -90,6 +84,74 @@ function ArrowIcon() {
         d="M5 12h14M13 6l6 6-6 6"
         stroke="currentColor"
         strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+function BeliefIcon({ type }) {
+  if (type === "target") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-6 w-6"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
+
+        <circle cx="12" cy="12" r="3" stroke="currentColor" strokeWidth="1.8" />
+
+        <path
+          d="M12 4V2M20 12h2"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </svg>
+    );
+  }
+
+  if (type === "eye") {
+    return (
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        className="h-6 w-6"
+        aria-hidden="true"
+      >
+        <path
+          d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6Z"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+
+        <circle
+          cx="12"
+          cy="12"
+          r="2.8"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+      </svg>
+    );
+  }
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6" aria-hidden="true">
+      <path
+        d="M12 3 19 6v5c0 4.8-2.8 8.2-7 10-4.2-1.8-7-5.2-7-10V6l7-3Z"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinejoin="round"
+      />
+
+      <path
+        d="m9 12 2 2 4-4"
+        stroke="currentColor"
+        strokeWidth="1.8"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
@@ -197,12 +259,12 @@ export default function AboutPage() {
               Your browser does not support the video tag.
             </video>
 
-            {/* Video overlays */}
+            {/* VIDEO OVERLAYS */}
             <div className="absolute inset-0 bg-black/10" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/90 via-[#071a31]/10 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/90 via-[#071a31]/15 to-black/5" />
 
-            {/* Video content box */}
+            {/* VIDEO TEXT */}
             <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071a31]/75 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
                 Our Purpose
@@ -240,14 +302,14 @@ export default function AboutPage() {
             <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-orange-400" />
           </div>
 
-          {/* VIDEO VALUE CARDS */}
+          {/* VIDEO CARDS */}
           <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {values.map((value) => (
               <article
                 key={value.title}
                 className="group relative min-h-[480px] overflow-hidden bg-[#071a31] shadow-[0_18px_45px_rgba(15,23,42,0.14)]"
               >
-                {/* Background video */}
+                {/* VIDEO */}
                 <video
                   autoPlay
                   muted
@@ -259,19 +321,19 @@ export default function AboutPage() {
                   Your browser does not support the video tag.
                 </video>
 
-                {/* Video overlays */}
+                {/* OVERLAYS */}
                 <div className="absolute inset-0 bg-black/15" />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/5" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/5" />
 
-                {/* Top category */}
+                {/* CATEGORY */}
                 <div className="absolute left-5 top-0 max-w-[90%] bg-orange-400 px-5 py-3">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#071a31]">
                     {value.category}
                   </p>
                 </div>
 
-                {/* Card content */}
+                {/* CONTENT */}
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl font-bold leading-tight text-white">
                     {value.title}
@@ -281,7 +343,6 @@ export default function AboutPage() {
                     {value.description}
                   </p>
 
-                  {/* CTA */}
                   <Link
                     href={value.href}
                     className="group/button mt-6 inline-flex items-center gap-2 border-b border-orange-400 pb-1 text-xs font-bold uppercase tracking-[0.16em] text-white transition-colors hover:text-orange-400"
@@ -310,36 +371,68 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MISSION, VISION AND COMMITMENT */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
-              What We Believe In
-            </p>
+      {/* MISSION / VISION / COMMITMENT */}
+      <section className="relative overflow-hidden bg-[#f3f7fb] px-4 pt-4 pb-20 sm:px-6 sm:pt-6 lg:px-8 lg:pt-8 lg:pb-24">
+        {" "}
+        {/* SOFT BACKGROUND DECORATION */}
+        <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-orange-100/45 blur-3xl" />
+        <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
+        <div className="relative mx-auto max-w-7xl">
+          {/* HEADING */}
+          <div className="grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-500">
+                What We Believe In
+              </p>
 
-            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Building Power Electrode Ltd for the Future
-            </h2>
+              <h2 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-[#102a4a] sm:text-4xl lg:text-5xl">
+                Built Around a Clear Purpose
+              </h2>
+            </div>
+
+            <div className="lg:pb-1">
+              <p className="max-w-2xl text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
+                Our mission, vision and commitment guide the way we build our
+                products, serve our customers and grow Power Electrode Ltd.
+              </p>
+            </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {/* BELIEF CARDS */}
+          <div className="mt-12 grid gap-5 md:grid-cols-3 lg:gap-6">
             {beliefs.map((belief) => (
               <article
                 key={belief.label}
-                className="relative overflow-hidden rounded-[24px] bg-[#102a4a] p-7 text-white sm:p-8"
+                className="group relative min-h-[330px] overflow-hidden rounded-[26px] border border-slate-200/90 bg-white p-7 shadow-[0_16px_45px_rgba(15,23,42,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-orange-200 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)] sm:p-8"
               >
-                <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-white/5" />
+                {/* TOP ORANGE ACCENT */}
+                <div className="absolute left-0 top-0 h-1.5 w-20 bg-orange-500 transition-all duration-500 group-hover:w-full" />
 
-                <p className="relative text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
+                {/* DECORATIVE CORNER */}
+                <div className="absolute -right-16 -top-20 h-52 w-52 rounded-full bg-[#102a4a]/[0.035] transition-transform duration-700 group-hover:scale-125" />
+
+                {/* ICON */}
+                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-orange-500 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
+                  <BeliefIcon type={belief.icon} />
+                </div>
+
+                {/* LABEL */}
+                <p className="relative mt-8 text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
                   {belief.label}
                 </p>
 
-                <h3 className="relative mt-4 text-2xl font-bold">
+                {/* TITLE */}
+                <h3 className="relative mt-3 text-2xl font-bold leading-tight text-[#102a4a] lg:text-[27px]">
                   {belief.title}
                 </h3>
 
-                <p className="relative mt-4 text-sm leading-7 text-white/65">
+                {/* DIVIDER */}
+                <div className="relative mt-5 h-px w-full bg-slate-200">
+                  <div className="h-full w-12 bg-orange-400 transition-all duration-500 group-hover:w-24" />
+                </div>
+
+                {/* DESCRIPTION */}
+                <p className="relative mt-5 text-sm leading-7 text-slate-600 sm:text-base">
                   {belief.description}
                 </p>
               </article>
@@ -348,70 +441,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MANUFACTURING PROCESS */}
-      <section className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-            {/* LEFT */}
-            <div>
-              <p className="text-xs font-bold uppercase tracking-[0.22em] text-orange-500">
-                Our Manufacturing Process
-              </p>
-
-              <h2 className="mt-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
-                Quality Considered at Every Stage
-              </h2>
-
-              <p className="mt-5 leading-7 text-slate-600 sm:text-lg sm:leading-8">
-                Our manufacturing process follows a carefully managed sequence
-                from material preparation through to final inspection and
-                packaging.
-              </p>
-
-              <Link
-                href="/manufacturing"
-                className="group mt-7 inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-xl bg-orange-500 px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-orange-600 sm:w-fit"
-              >
-                See How We Manufacture
-                <ArrowIcon />
-              </Link>
-            </div>
-
-            {/* RIGHT PROCESS STEPS */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              {processSteps.map((step) => (
-                <div
-                  key={step}
-                  className="group flex min-h-[88px] items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
-                >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-orange-50 text-orange-500 transition-colors group-hover:bg-orange-500 group-hover:text-white">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      className="h-4 w-4"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M5 12.5l4.2 4L19 7"
-                        stroke="currentColor"
-                        strokeWidth="2.4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-
-                  <p className="font-semibold text-slate-900">{step}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FINAL CTA */}
-      <section className="px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10 lg:px-14">
+      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10 lg:px-14 lg:py-16">
+          {/* DECORATION */}
           <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/5" />
 
           <div className="absolute -bottom-20 -left-16 h-52 w-52 rounded-full bg-white/5" />
