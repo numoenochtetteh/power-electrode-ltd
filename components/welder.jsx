@@ -115,18 +115,15 @@ export function Welder() {
         {/* Video and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
           {/* Video */}
-          <div className="relative min-h-[420px] overflow-hidden rounded-[22px] bg-slate-950 sm:min-h-[460px] sm:rounded-[26px] md:min-h-[540px]">
+          <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-slate-950 sm:h-[570px] lg:h-[620px]">
             <video
-              className="absolute inset-0 h-full w-full scale-[1.85] object-cover object-center"
               autoPlay
               muted
               loop
               playsInline
-              preload="metadata"
-              poster="/images/frame001.png"
-              aria-label="Power Electrode Ltd welding electrode production"
+              className="absolute inset-0 h-full w-full object-cover"
             >
-              <source src="/video/vid7.mp4" type="video/mp4" />
+              <source src="/video/vid8.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

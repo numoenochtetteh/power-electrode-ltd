@@ -72,7 +72,7 @@ export function AboutPreview() {
                 poster="/images/pic3.jpg"
                 aria-label="Power Electrode Ltd welding electrode manufacturing"
               >
-                <source src="/video/vid4.mp4" type="video/mp4" />
+                <source src="/video/vid13.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
 
