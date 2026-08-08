@@ -123,10 +123,10 @@ export function Welder() {
               loop
               playsInline
               preload="metadata"
-              poster="/images/pic1.jpg"
+              poster="/images/frame001.png"
               aria-label="Power Electrode Ltd welding electrode production"
             >
-              <source src="/video/vid5.mp4" type="video/mp4" />
+              <source src="/video/vid7.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

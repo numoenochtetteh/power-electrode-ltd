@@ -15,7 +15,7 @@ const values = [
     title: "Quality First",
     description:
       "We focus on producing dependable welding electrodes through careful material selection and controlled manufacturing.",
-    video: "/video/vid1.mp4",
+    video: "/video/vid9.mp4",
     action: "Contact Us",
     href: "/contact",
   },
@@ -24,7 +24,7 @@ const values = [
     title: "Consistent Performance",
     description:
       "Our products are developed to support stable arc performance and reliable welding results.",
-    video: "/video/vid1.mp4",
+    video: "/video/vid10.mp4",
     action: "View Products",
     href: "/products",
   },
@@ -33,7 +33,7 @@ const values = [
     title: "Customer Focus",
     description:
       "We listen to our customers and work to provide products that support their welding requirements.",
-    video: "/video/vid1.mp4",
+    video: "/video/vid11.mp4",
     action: "Request a Quote",
     href: "/contact",
   },
@@ -42,7 +42,7 @@ const values = [
     title: "Continuous Improvement",
     description:
       "We are committed to improving our processes, products and customer experience as the company grows.",
-    video: "/video/vid1.mp4",
+    video: "/video/vid12.mp4",
     action: "Our Manufacturing",
     href: "/manufacturing",
   },
@@ -255,7 +255,7 @@ export default function AboutPage() {
               playsInline
               className="absolute inset-0 h-full w-full object-cover"
             >
-              <source src="/video/vid1.mp4" type="video/mp4" />
+              <source src="/video/vid8.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 

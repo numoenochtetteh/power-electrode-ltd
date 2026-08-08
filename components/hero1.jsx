@@ -31,7 +31,7 @@ export function Hero1() {
         preload="metadata"
         className="absolute inset-0 h-full w-full object-cover"
       >
-        <source src="/video/vid3.mp4" type="video/mp4" />
+        <source src="/video/vid10.mp4" type="video/mp4" />
       </video>
 
       {/* Dark overlays */}
