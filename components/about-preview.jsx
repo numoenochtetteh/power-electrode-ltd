@@ -56,27 +56,19 @@ export function AboutPreview() {
         </div>
 
         <div className="grid items-center gap-7 md:grid-cols-2 md:gap-14 lg:gap-20">
-          {/* Video — displayed last on phones */}
+          {/* Image — displayed last on phones */}
           <div className="relative order-2 sm:order-1">
-            {/* Orange shape behind video */}
+            {/* Orange shape behind image */}
             <div className="absolute -bottom-5 -right-5 hidden h-[85%] w-[85%] rounded-[30px] bg-orange-100 sm:block" />
 
             <div className="relative min-h-[420px] overflow-hidden rounded-[18px] border border-white/40 shadow-[0_18px_45px_rgba(15,23,42,0.1)] sm:min-h-[500px] sm:rounded-[24px] md:min-h-[560px]">
-              <video
+              <img
+                src="/images/pic1.jpg"
+                alt="Power Electrode Ltd welding electrode manufacturing"
                 className="absolute inset-0 h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-                preload="metadata"
-                poster="/images/pic3.jpg"
-                aria-label="Power Electrode Ltd welding electrode manufacturing"
-              >
-                <source src="/video/vid13.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
 
-              {/* Video overlay */}
+              {/* Image overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 via-transparent to-black/10" />
 
               {/* Registration badge */}
@@ -84,7 +76,7 @@ export function AboutPreview() {
                 Registered April 2025
               </div>
 
-              {/* Video information */}
+              {/* Image information */}
               <div className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/20 bg-slate-950/50 p-4 text-white shadow-lg backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:rounded-2xl sm:p-6">
                 <div className="mb-2 h-1 w-8 rounded-full bg-orange-500 sm:mb-3 sm:w-10" />
 

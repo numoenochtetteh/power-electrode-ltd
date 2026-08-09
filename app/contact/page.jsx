@@ -3,6 +3,7 @@ import { ContactEnquiryForm } from "@/components/contact-enquiry-form";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { PageHero } from "@/components/page-hero";
+import { ReviewForm } from "@/components/review-form";
 
 export const metadata = {
   title: "Contact Us | Power Electrode Ltd",
@@ -177,6 +178,25 @@ export default function ContactPage() {
           </div>
 
           <ContactEnquiryForm />
+        </div>
+      </section>
+
+      {/* Customer review */}
+      <section id="reviews" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        <div className="mx-auto grid max-w-7xl items-start gap-9 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
+          <div>
+            <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
+              <span className="h-px w-5 bg-orange-500" />
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">Customer Review</p>
+            </div>
+            <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">Share Your Experience</h2>
+            <p className="mt-4 max-w-xl leading-7 text-slate-600 sm:text-lg sm:leading-8">Have you worked with our electrodes or our team? Send us an honest review to help us improve our products and service.</p>
+            <div className="mt-6 rounded-2xl bg-[#102a4a] p-5 text-white sm:p-6">
+              <p className="font-bold">Reviews are checked before publishing</p>
+              <p className="mt-2 text-sm leading-6 text-white/65">This protects customer privacy and keeps every published review genuine and relevant.</p>
+            </div>
+          </div>
+          <ReviewForm />
         </div>
       </section>
 

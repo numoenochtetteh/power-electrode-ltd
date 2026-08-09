@@ -18,7 +18,7 @@ const processSteps = [
       "The manufacturing process begins with the careful selection of core wire and coating materials required for electrode production.",
     detail:
       "Materials are reviewed before production to support consistency and dependable welding performance.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-raw-material.png",
   },
   {
     number: "02",
@@ -27,7 +27,7 @@ const processSteps = [
       "Metal core wire is straightened, cleaned and cut into the required electrode lengths.",
     detail:
       "Proper preparation creates a consistent foundation for the coating and finishing stages.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-core-wire.png",
   },
   {
     number: "03",
@@ -36,7 +36,7 @@ const processSteps = [
       "Selected coating materials are carefully measured and blended to produce the mixture applied around the electrode core.",
     detail:
       "The coating supports arc behaviour, weld protection and consistent electrode operation.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-coating-mixture.png",
   },
   {
     number: "04",
@@ -45,7 +45,7 @@ const processSteps = [
       "The prepared core wires are evenly coated through a controlled application process.",
     detail:
       "Careful coating helps maintain a consistent electrode shape and dependable welding performance.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-electrode-coating.png",
   },
   {
     number: "05",
@@ -54,7 +54,7 @@ const processSteps = [
       "The coated electrodes are dried and finished under controlled conditions before final inspection.",
     detail:
       "This stage supports coating durability, product handling and storage quality.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-drying-finishing.png",
   },
   {
     number: "06",
@@ -63,7 +63,7 @@ const processSteps = [
       "Finished electrodes are checked and securely packaged before storage and distribution.",
     detail:
       "Protective packaging helps reduce damage and unnecessary moisture exposure.",
-    image: "/images/pic2.jpg",
+    image: "/images/process-inspection-packaging.png",
   },
 ];
 
