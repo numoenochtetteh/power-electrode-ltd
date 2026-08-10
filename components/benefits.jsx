@@ -7,6 +7,7 @@ const advantages = [
     description:
       "Manufactured in Ghana with carefully controlled production standards.",
     href: "/manufacturing",
+    action: "Our Manufacturing",
   },
   {
     icon: "delivery",
@@ -14,6 +15,7 @@ const advantages = [
     description:
       "Securely packaged and prepared for safe, dependable delivery.",
     href: "/contact",
+    action: "Contact Us",
   },
   {
     icon: "support",
@@ -21,6 +23,7 @@ const advantages = [
     description:
       "Practical assistance when selecting electrodes for your application.",
     href: "/contact",
+    action: "Speak With Our Team",
   },
 ];
 
@@ -30,7 +33,7 @@ function FeatureIcon({ type }) {
       <svg
         viewBox="0 0 64 64"
         fill="none"
-        className="h-12 w-12"
+        className="h-14 w-14 sm:h-16 sm:w-16"
         aria-hidden="true"
       >
         <path
@@ -62,7 +65,7 @@ function FeatureIcon({ type }) {
       <svg
         viewBox="0 0 64 64"
         fill="none"
-        className="h-12 w-12"
+        className="h-14 w-14 sm:h-16 sm:w-16"
         aria-hidden="true"
       >
         <path
@@ -90,7 +93,7 @@ function FeatureIcon({ type }) {
     <svg
       viewBox="0 0 64 64"
       fill="none"
-      className="h-12 w-12"
+      className="h-14 w-14 sm:h-16 sm:w-16"
       aria-hidden="true"
     >
       <path
@@ -124,7 +127,7 @@ function ArrowIcon() {
     <svg
       viewBox="0 0 24 24"
       fill="none"
-      className="h-3.5 w-3.5 transition-transform duration-300 group-hover/link:translate-x-1"
+      className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
       aria-hidden="true"
     >
       <path
@@ -142,9 +145,9 @@ export function Benefits() {
   return (
     <section
       id="benefits"
-      className="bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
+      className="overflow-hidden bg-[#f6f7f9] px-4 py-14 sm:px-6 sm:py-16 lg:px-8 lg:py-20"
     >
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-7xl">
         {/* Section heading */}
         <div className="mx-auto mb-10 max-w-2xl text-center sm:mb-12">
           <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
@@ -167,38 +170,44 @@ export function Benefits() {
         </div>
 
         {/* Cards */}
-        <div className="grid justify-items-center gap-8 md:grid-cols-3 md:gap-6 lg:gap-8">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {advantages.map((advantage) => (
             <article
               key={advantage.title}
-              className="group w-full max-w-[280px] overflow-hidden rounded-[20px] border border-slate-200 bg-white shadow-[0_12px_30px_rgba(15,23,42,0.09)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(15,23,42,0.14)] sm:max-w-[250px] md:max-w-[290px] lg:max-w-[320px]"
+              className="group mx-auto flex min-h-[400px] w-full max-w-[390px] flex-col overflow-hidden rounded-[22px] border border-slate-200 bg-white shadow-[0_18px_45px_rgba(15,23,42,0.12)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(15,23,42,0.16)] sm:min-h-[430px] sm:max-w-none lg:min-h-[460px]"
             >
-              {/* Tall navy visual area */}
-              <div className="relative flex h-36 items-center justify-center overflow-hidden bg-[#102a4a] text-orange-400 sm:h-40 lg:h-44">
-                <div className="absolute -right-12 -top-12 h-28 w-28 rounded-full border border-white/10" />
+              {/* Navy icon area */}
+              <div className="relative flex h-[190px] shrink-0 items-center justify-center overflow-hidden bg-[#102a4a] text-orange-500 sm:h-[220px] lg:h-[245px]">
+                {/* Decorative circle */}
+                <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full border border-white/10" />
 
-                <div className="absolute -bottom-12 -left-12 h-28 w-28 rounded-full border border-white/10" />
+                {/* Decorative circle */}
+                <div className="absolute -bottom-14 -left-14 h-36 w-36 rounded-full border border-white/10" />
 
-                <div className="relative transition-transform duration-300 group-hover:scale-105">
+                {/* Subtle centre glow */}
+                <div className="absolute h-28 w-28 rounded-full bg-orange-500/5 blur-2xl" />
+
+                {/* Icon */}
+                <div className="relative transition-transform duration-300 group-hover:scale-110">
                   <FeatureIcon type={advantage.icon} />
                 </div>
               </div>
 
               {/* White content area */}
-              <div className="flex min-h-[165px] flex-col items-center px-4 py-5 text-center sm:min-h-[180px] sm:px-5 sm:py-6 lg:min-h-[195px]">
-                <h3 className="text-[12px] font-extrabold leading-4 text-[#102a4a] sm:text-sm lg:text-base">
+              <div className="flex flex-1 flex-col items-center px-6 py-7 text-center sm:px-7 sm:py-8 lg:px-8">
+                <h3 className="text-lg font-bold leading-tight tracking-[-0.025em] text-[#102a4a] sm:text-xl">
                   {advantage.title}
                 </h3>
 
-                <p className="mt-3 max-w-[240px] text-[10px] leading-[1.5] text-slate-600 sm:text-xs sm:leading-5 lg:text-[13px]">
+                <p className="mt-4 max-w-[300px] text-sm leading-6 text-slate-600 sm:text-base sm:leading-7">
                   {advantage.description}
                 </p>
 
                 <Link
                   href={advantage.href}
-                  className="group/link mt-auto inline-flex min-h-9 items-center justify-center gap-2 rounded-full border border-orange-300 px-4 py-2 text-[10px] font-bold text-[#102a4a] transition-all duration-300 hover:border-orange-500 hover:bg-orange-500 hover:text-white sm:text-[11px]"
+                  className="group mt-auto inline-flex items-center gap-3 border-b border-orange-500 pb-2 text-[10px] font-bold uppercase tracking-[0.15em] text-[#102a4a] transition-colors hover:text-orange-500 sm:text-xs"
                 >
-                  Learn More
+                  {advantage.action}
                   <ArrowIcon />
                 </Link>
               </div>
