@@ -115,7 +115,8 @@ export function Welder() {
         {/* Video and content */}
         <div className="grid items-center gap-9 md:grid-cols-2 lg:gap-16">
           {/* Video */}
-          <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-slate-950 sm:h-[570px] lg:h-[620px]">
+          <div className="relative h-[380px] overflow-hidden rounded-[22px] bg-slate-950 sm:h-[570px] sm:rounded-[28px] lg:h-[620px]">
+            {" "}
             <video
               autoPlay
               muted
@@ -126,10 +127,8 @@ export function Welder() {
               <source src="/video/vid8.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-
             {/* Video overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-black/5 to-transparent" />
-
             {/* Video information */}
             <div className="absolute bottom-4 left-4 right-4 rounded-[18px] border border-white/20 bg-slate-950/55 p-4 text-white backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-6 sm:rounded-2xl sm:p-5">
               <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-orange-400">
