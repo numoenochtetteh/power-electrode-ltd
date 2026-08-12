@@ -15,7 +15,7 @@ const values = [
     title: "Quality First",
     description:
       "We focus on producing dependable welding electrodes through careful material selection and controlled manufacturing.",
-    video: "/video/vid9.mp4",
+    image: "/images/112.jpg",
     action: "Contact Us",
     href: "/contact",
   },
@@ -24,7 +24,7 @@ const values = [
     title: "Consistent Performance",
     description:
       "Our products are developed to support stable arc performance and reliable welding results.",
-    video: "/video/vid10.mp4",
+    image: "/images/113.jpg",
     action: "View Products",
     href: "/products",
   },
@@ -33,7 +33,7 @@ const values = [
     title: "Customer Focus",
     description:
       "We listen to our customers and work to provide products that support their welding requirements.",
-    video: "/video/vid11.mp4",
+    image: "/images/114.jpg",
     action: "Request a Quote",
     href: "/contact",
   },
@@ -42,7 +42,7 @@ const values = [
     title: "Continuous Improvement",
     description:
       "We are committed to improving our processes, products and customer experience as the company grows.",
-    video: "/video/vid12.mp4",
+    image: "/images/115.jpg",
     action: "Our Manufacturing",
     href: "/manufacturing",
   },
@@ -164,7 +164,7 @@ export default function AboutPage() {
     <main className="min-h-screen bg-white">
       <Header />
 
-      {/* HERO */}
+      {/* About page hero */}
       <PageHero
         image="/images/frame3.jpg"
         imageAlt="Power Electrode Ltd welding operations"
@@ -185,10 +185,10 @@ export default function AboutPage() {
         ]}
       />
 
-      {/* WHO WE ARE */}
+      {/* Who we are */}
       <section className="px-4 py-16 sm:px-6 md:py-20 lg:px-8 lg:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
-          {/* LEFT CONTENT */}
+          {/* Text content */}
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
               <span className="h-px w-5 bg-orange-500" />
@@ -222,8 +222,8 @@ export default function AboutPage() {
               and dependable service.
             </p>
 
-            {/* INFO BOXES */}
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            {/* Company information */}
+            <div className="mt-8 grid grid-cols-1 gap-4 min-[400px]:grid-cols-2">
               <div className="rounded-2xl border border-slate-200 bg-[#f7f8fa] p-5">
                 <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-500">
                   Registered
@@ -246,25 +246,20 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* RIGHT VIDEO */}
-          <div className="relative h-[520px] overflow-hidden rounded-[28px] bg-slate-950 sm:h-[570px] lg:h-[620px]">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
+          {/* Main image */}
+          <div className="relative h-[430px] overflow-hidden rounded-[22px] bg-slate-950 sm:h-[520px] sm:rounded-[28px] lg:h-[580px]">
+            <img
+              src="/images/111.jpg"
+              alt="Power Electrode Ltd welding electrode manufacturing"
               className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src="/video/vid3.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            />
 
-            {/* VIDEO OVERLAYS */}
+            {/* Image overlays */}
             <div className="absolute inset-0 bg-black/10" />
 
             <div className="absolute inset-0 bg-gradient-to-t from-[#071a31]/90 via-[#071a31]/15 to-black/5" />
 
-            {/* VIDEO TEXT */}
+            {/* Image information */}
             <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-[#071a31]/75 p-5 text-white backdrop-blur-md sm:bottom-7 sm:left-7 sm:right-7 sm:p-6">
               <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-400">
                 Our Purpose
@@ -278,19 +273,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* OUR VALUES */}
+      {/* Our values */}
       <section
         id="quality"
-        className="bg-[#f7f8fa] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+        className="bg-[#f7f8fa] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       >
         <div className="mx-auto max-w-7xl">
-          {/* HEADING */}
+          {/* Section heading */}
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-xs font-bold uppercase tracking-[0.28em] text-orange-500">
               Our Values
             </p>
 
-            <h2 className="mt-4 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl">
               What Drives Us
             </h2>
 
@@ -302,38 +297,33 @@ export default function AboutPage() {
             <div className="mx-auto mt-6 h-1 w-20 rounded-full bg-orange-400" />
           </div>
 
-          {/* VIDEO CARDS */}
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Image cards */}
+          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-4">
             {values.map((value) => (
               <article
                 key={value.title}
-                className="group relative min-h-[480px] overflow-hidden bg-[#071a31] shadow-[0_18px_45px_rgba(15,23,42,0.14)]"
+                className="group relative min-h-[430px] overflow-hidden bg-[#071a31] shadow-[0_18px_45px_rgba(15,23,42,0.14)] sm:min-h-[480px]"
               >
-                {/* VIDEO */}
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+                {/* Background image */}
+                <img
+                  src={value.image}
+                  alt={value.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                >
-                  <source src={value.video} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
 
-                {/* OVERLAYS */}
+                {/* Image overlays */}
                 <div className="absolute inset-0 bg-black/15" />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 to-black/5" />
 
-                {/* CATEGORY */}
+                {/* Category */}
                 <div className="absolute left-5 top-0 max-w-[90%] bg-orange-400 px-5 py-3">
                   <p className="text-[11px] font-extrabold uppercase tracking-[0.1em] text-[#071a31]">
                     {value.category}
                   </p>
                 </div>
 
-                {/* CONTENT */}
+                {/* Card content */}
                 <div className="absolute inset-x-0 bottom-0 p-6">
                   <h3 className="text-2xl font-bold leading-tight text-white">
                     {value.title}
@@ -371,14 +361,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* MISSION / VISION / COMMITMENT */}
-      <section className="relative overflow-hidden bg-[#f3f7fb] px-4 pt-4 pb-20 sm:px-6 sm:pt-6 lg:px-8 lg:pt-8 lg:pb-24">
-        {" "}
-        {/* SOFT BACKGROUND DECORATION */}
+      {/* Mission, vision and commitment */}
+      <section className="relative overflow-hidden bg-[#f3f7fb] px-4 pb-20 pt-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+        {/* Decorative backgrounds */}
         <div className="pointer-events-none absolute -left-32 top-10 h-80 w-80 rounded-full bg-orange-100/45 blur-3xl" />
+
         <div className="pointer-events-none absolute -right-32 bottom-0 h-80 w-80 rounded-full bg-blue-100/40 blur-3xl" />
+
         <div className="relative mx-auto max-w-7xl">
-          {/* HEADING */}
+          {/* Section heading */}
           <div className="grid gap-7 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
             <div>
               <p className="text-xs font-bold uppercase tracking-[0.25em] text-orange-500">
@@ -398,40 +389,40 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* BELIEF CARDS */}
+          {/* Belief cards */}
           <div className="mt-12 grid gap-5 md:grid-cols-3 lg:gap-6">
             {beliefs.map((belief) => (
               <article
                 key={belief.label}
-                className="group relative min-h-[330px] overflow-hidden rounded-[26px] border border-slate-200/90 bg-white p-7 shadow-[0_16px_45px_rgba(15,23,42,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-orange-200 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)] sm:p-8"
+                className="group relative min-h-[320px] overflow-hidden rounded-[26px] border border-slate-200/90 bg-white p-7 shadow-[0_16px_45px_rgba(15,23,42,0.07)] transition-all duration-500 hover:-translate-y-2 hover:border-orange-200 hover:shadow-[0_24px_60px_rgba(15,23,42,0.12)] sm:min-h-[330px] sm:p-8"
               >
-                {/* TOP ORANGE ACCENT */}
+                {/* Top orange accent */}
                 <div className="absolute left-0 top-0 h-1.5 w-20 bg-orange-500 transition-all duration-500 group-hover:w-full" />
 
-                {/* DECORATIVE CORNER */}
+                {/* Decorative corner */}
                 <div className="absolute -right-16 -top-20 h-52 w-52 rounded-full bg-[#102a4a]/[0.035] transition-transform duration-700 group-hover:scale-125" />
 
-                {/* ICON */}
+                {/* Icon */}
                 <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-orange-50 text-orange-500 transition-all duration-300 group-hover:bg-orange-500 group-hover:text-white">
                   <BeliefIcon type={belief.icon} />
                 </div>
 
-                {/* LABEL */}
+                {/* Label */}
                 <p className="relative mt-8 text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
                   {belief.label}
                 </p>
 
-                {/* TITLE */}
+                {/* Title */}
                 <h3 className="relative mt-3 text-2xl font-bold leading-tight text-[#102a4a] lg:text-[27px]">
                   {belief.title}
                 </h3>
 
-                {/* DIVIDER */}
+                {/* Divider */}
                 <div className="relative mt-5 h-px w-full bg-slate-200">
                   <div className="h-full w-12 bg-orange-400 transition-all duration-500 group-hover:w-24" />
                 </div>
 
-                {/* DESCRIPTION */}
+                {/* Description */}
                 <p className="relative mt-5 text-sm leading-7 text-slate-600 sm:text-base">
                   {belief.description}
                 </p>
@@ -441,10 +432,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* FINAL CTA */}
-      <section className="bg-white px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+      {/* Final call to action */}
+      <section className="bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
         <div className="relative mx-auto max-w-7xl overflow-hidden rounded-[28px] bg-[#102a4a] px-6 py-12 text-center sm:px-10 lg:px-14 lg:py-16">
-          {/* DECORATION */}
+          {/* Decorations */}
           <div className="absolute -right-16 -top-20 h-56 w-56 rounded-full bg-white/5" />
 
           <div className="absolute -bottom-20 -left-16 h-52 w-52 rounded-full bg-white/5" />
