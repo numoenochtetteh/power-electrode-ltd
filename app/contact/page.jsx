@@ -6,9 +6,10 @@ import { PageHero } from "@/components/page-hero";
 import { ReviewForm } from "@/components/review-form";
 
 export const metadata = {
-  title: "Contact Us | Power Electrode Ltd",
+  title: "Contact Us",
   description:
     "Contact Power Electrode Ltd for welding electrode enquiries, quotations, bulk orders and directions.",
+  alternates: { canonical: "/contact" },
 };
 
 const contactDetails = [
@@ -65,7 +66,7 @@ export default function ContactPage() {
       <Header />
 
       <PageHero
-        image="/images/frame4.jpg"
+        image="/images/frame4.webp"
         imageAlt="Contact Power Electrode Ltd"
         imagePosition="58% center"
         eyebrow="Get in Touch"

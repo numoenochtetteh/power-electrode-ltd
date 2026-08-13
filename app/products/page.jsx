@@ -4,9 +4,10 @@ import { Header } from "@/components/header";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
-  title: "Welding Electrodes | Power Electrode Ltd",
+  title: "Welding Electrodes",
   description:
     "Explore welding electrodes manufactured by Power Electrode Ltd for fabrication, maintenance and industrial applications.",
+  alternates: { canonical: "/products" },
 };
 
 const products = [
@@ -106,7 +107,7 @@ export default function ProductsPage() {
       <Header />
 
       <PageHero
-        image="/images/frame1.jpg"
+        image="/images/frame1.webp"
         imageAlt="Power Electrode Ltd welding electrodes"
         imagePosition="58% center"
         eyebrow="Power Electrode Ltd Products"

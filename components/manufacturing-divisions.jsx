@@ -1,3 +1,5 @@
+import { LazyVideo } from "@/components/lazy-video";
+
 function ArrowIcon() {
   return (
     <svg
@@ -55,18 +57,14 @@ export function ManufacturingDivisions() {
 
         {/* Manufacturing video */}
         <div className="relative overflow-hidden rounded-[1px] bg-slate-950 shadow-[0_18px_50px_rgba(15,23,42,0.14)] sm:rounded-[1px]">
-          <video
-            className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[500px]"
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="metadata"
-            aria-label="Power Electrode Ltd manufacturing process"
-          >
-            <source src="/video/vid1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <div className="relative h-[420px] w-full sm:h-[500px] lg:h-[500px]">
+            <LazyVideo
+              src="/video/vid1.mp4"
+              poster="/images/frame001.webp"
+              className="h-full w-full object-cover"
+              ariaLabel="Power Electrode Ltd manufacturing process"
+            />
+          </div>
 
           {/* Video overlay */}
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />

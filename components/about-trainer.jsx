@@ -10,7 +10,7 @@ export function AboutTrainer() {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5" />
 
             <img
-              src="/images/pic2.jpg"
+              src="/images/pic2.webp"
               alt="Institutional furniture manufactured by the company"
               className="h-full w-full rounded-2xl object-cover"
             />

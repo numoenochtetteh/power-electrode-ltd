@@ -137,7 +137,7 @@ export function Header() {
               } lg:h-9 lg:w-9 lg:bg-slate-50 lg:p-0 lg:shadow-none`}
             >
               <Image
-                src="/images/power-electrode-logo.png"
+                src="/images/power-electrode-logo.webp"
                 alt="Power Electrode Ltd logo"
                 width={48}
                 height={48}

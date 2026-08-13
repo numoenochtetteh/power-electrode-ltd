@@ -63,7 +63,7 @@ export function AboutPreview() {
 
             <div className="relative min-h-[420px] overflow-hidden rounded-[18px] border border-white/40 shadow-[0_18px_45px_rgba(15,23,42,0.1)] sm:min-h-[500px] sm:rounded-[24px] md:min-h-[560px]">
               <img
-                src="/images/pic1.jpg"
+                src="/images/pic1.webp"
                 alt="Power Electrode Ltd welding electrode manufacturing"
                 className="absolute inset-0 h-full w-full object-cover"
               />

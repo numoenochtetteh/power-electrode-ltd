@@ -5,9 +5,10 @@ import { Header } from "@/components/header";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
-  title: "Manufacturing Process | Power Electrode Ltd",
+  title: "Manufacturing Process",
   description:
     "See how Power Electrode Ltd manufactures welding electrodes, from raw material preparation to inspection and packaging.",
+  alternates: { canonical: "/manufacturing" },
 };
 
 const processSteps = [
@@ -18,7 +19,7 @@ const processSteps = [
       "The manufacturing process begins with the careful selection of core wire and coating materials required for electrode production.",
     detail:
       "Materials are reviewed before production to support consistency and dependable welding performance.",
-    image: "/images/process-raw-material.png",
+    image: "/images/process-raw-material.webp",
   },
   {
     number: "02",
@@ -27,7 +28,7 @@ const processSteps = [
       "Metal core wire is straightened, cleaned and cut into the required electrode lengths.",
     detail:
       "Proper preparation creates a consistent foundation for the coating and finishing stages.",
-    image: "/images/process-core-wire.png",
+    image: "/images/process-core-wire.webp",
   },
   {
     number: "03",
@@ -36,7 +37,7 @@ const processSteps = [
       "Selected coating materials are carefully measured and blended to produce the mixture applied around the electrode core.",
     detail:
       "The coating supports arc behaviour, weld protection and consistent electrode operation.",
-    image: "/images/process-coating-mixture.png",
+    image: "/images/process-coating-mixture.webp",
   },
   {
     number: "04",
@@ -45,7 +46,7 @@ const processSteps = [
       "The prepared core wires are evenly coated through a controlled application process.",
     detail:
       "Careful coating helps maintain a consistent electrode shape and dependable welding performance.",
-    image: "/images/process-electrode-coating.png",
+    image: "/images/process-electrode-coating.webp",
   },
   {
     number: "05",
@@ -54,7 +55,7 @@ const processSteps = [
       "The coated electrodes are dried and finished under controlled conditions before final inspection.",
     detail:
       "This stage supports coating durability, product handling and storage quality.",
-    image: "/images/process-drying-finishing.png",
+    image: "/images/process-drying-finishing.webp",
   },
   {
     number: "06",
@@ -63,7 +64,7 @@ const processSteps = [
       "Finished electrodes are checked and securely packaged before storage and distribution.",
     detail:
       "Protective packaging helps reduce damage and unnecessary moisture exposure.",
-    image: "/images/process-inspection-packaging.png",
+    image: "/images/process-inspection-packaging.webp",
   },
 ];
 
@@ -92,7 +93,7 @@ export default function ManufacturingPage() {
       <Header />
 
       <PageHero
-        image="/images/frame2.jpg"
+        image="/images/frame2.webp"
         imageAlt="Power Electrode Ltd manufacturing facility"
         imagePosition="58% center"
         eyebrow="Power Electrode Ltd Manufacturing"

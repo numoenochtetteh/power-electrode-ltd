@@ -4,9 +4,10 @@ import { Header } from "@/components/header";
 import { PageHero } from "@/components/page-hero";
 
 export const metadata = {
-  title: "About Us | Power Electrode Ltd",
+  title: "About Us",
   description:
     "Learn about Power Electrode Ltd, a Ghanaian welding electrode manufacturer registered on 25 April 2025.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [
@@ -15,7 +16,7 @@ const values = [
     title: "Quality First",
     description:
       "We focus on producing dependable welding electrodes through careful material selection and controlled manufacturing.",
-    image: "/images/112.jpg",
+    image: "/images/112.webp",
     action: "Contact Us",
     href: "/contact",
   },
@@ -24,7 +25,7 @@ const values = [
     title: "Consistent Performance",
     description:
       "Our products are developed to support stable arc performance and reliable welding results.",
-    image: "/images/113.jpg",
+    image: "/images/113.webp",
     action: "View Products",
     href: "/products",
   },
@@ -33,7 +34,7 @@ const values = [
     title: "Customer Focus",
     description:
       "We listen to our customers and work to provide products that support their welding requirements.",
-    image: "/images/114.jpg",
+    image: "/images/114.webp",
     action: "Request a Quote",
     href: "/contact",
   },
@@ -42,7 +43,7 @@ const values = [
     title: "Continuous Improvement",
     description:
       "We are committed to improving our processes, products and customer experience as the company grows.",
-    image: "/images/115.jpg",
+    image: "/images/115.webp",
     action: "Our Manufacturing",
     href: "/manufacturing",
   },
@@ -166,7 +167,7 @@ export default function AboutPage() {
 
       {/* About page hero */}
       <PageHero
-        image="/images/frame3.jpg"
+        image="/images/frame3.webp"
         imageAlt="Power Electrode Ltd welding operations"
         imagePosition="58% center"
         eyebrow="Power Electrode Ltd"
@@ -249,7 +250,7 @@ export default function AboutPage() {
           {/* Main image */}
           <div className="relative h-[430px] overflow-hidden rounded-[22px] bg-slate-950 sm:h-[520px] sm:rounded-[28px] lg:h-[580px]">
             <img
-              src="/images/111.jpg"
+              src="/images/111.webp"
               alt="Power Electrode Ltd welding electrode manufacturing"
               className="absolute inset-0 h-full w-full object-cover"
             />

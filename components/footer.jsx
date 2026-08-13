@@ -140,7 +140,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center gap-3">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl bg-white p-1 sm:h-16 sm:w-16">
                 <img
-                  src="/images/power-electrode-logo.png"
+                  src="/images/power-electrode-logo.webp"
                   alt="Power Electrode Ltd logo"
                   className="h-full w-full object-cover"
                 />

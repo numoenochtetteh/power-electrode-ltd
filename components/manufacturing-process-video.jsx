@@ -1,11 +1,31 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export function ManufacturingProcessVideo() {
   const videoRef = useRef(null);
+  const containerRef = useRef(null);
+  const [shouldLoad, setShouldLoad] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   const [volume, setVolume] = useState(0.7);
+
+  useEffect(() => {
+    const element = containerRef.current;
+    if (!element) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setShouldLoad(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "250px" },
+    );
+
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
 
   function keepVideoPlaying() {
     const video = videoRef.current;
@@ -47,17 +67,19 @@ export function ManufacturingProcessVideo() {
   }
 
   return (
-    <div className="relative h-[560px] overflow-hidden rounded-[28px] bg-black sm:h-[430px] lg:h-[500px]">
+    <div ref={containerRef} className="relative h-[560px] overflow-hidden rounded-[28px] bg-black sm:h-[430px] lg:h-[500px]">
       <video
         ref={videoRef}
-        autoPlay
+        autoPlay={shouldLoad}
         muted
         loop
         playsInline
+        preload={shouldLoad ? "metadata" : "none"}
+        poster="/images/frame001.webp"
         onPause={keepVideoPlaying}
         className="h-full w-full object-cover"
       >
-        <source src="/video/vid1.mp4" type="video/mp4" />
+        {shouldLoad && <source src="/video/vid1.mp4" type="video/mp4" />}
         Your browser does not support the video tag.
       </video>
 

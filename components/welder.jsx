@@ -1,3 +1,5 @@
+import { LazyVideo } from "@/components/lazy-video";
+
 const electrodeFeatures = [
   {
     icon: "quality",
@@ -117,16 +119,12 @@ export function Welder() {
           {/* Video */}
           <div className="relative h-[380px] overflow-hidden rounded-[22px] bg-slate-950 sm:h-[570px] sm:rounded-[28px] lg:h-[620px]">
             {" "}
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 h-full w-full object-cover"
-            >
-              <source src="/video/vid8.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            <LazyVideo
+              src="/video/vid8.mp4"
+              poster="/images/111.webp"
+              className="h-full w-full object-cover"
+              ariaLabel="Power Electrode Ltd welding electrodes"
+            />
             {/* Video overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-black/5 to-transparent" />
             {/* Video information */}
