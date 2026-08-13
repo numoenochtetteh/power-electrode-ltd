@@ -16,7 +16,7 @@ const contactDetails = [
   {
     number: "01",
     title: "Call Our Team",
-    detail: "+233 244 316 183",
+    detail: "+233 241 751 355",
     description: "Speak with us about products, prices and availability.",
     href: "tel:+233244316183",
     action: "Call now",
@@ -75,7 +75,7 @@ export default function ContactPage() {
         actions={[
           { label: "Send an Enquiry", href: "#enquiry" },
           {
-            label: "Call +233 244 316 183",
+            label: "Call +233 241 751 355",
             href: "tel:+233244316183",
             variant: "secondary",
             icon: "phone",
@@ -169,7 +169,7 @@ export default function ContactPage() {
                 Prefer to Call?
               </p>
 
-              <p className="mt-3 text-lg font-bold">+233 244 316 183</p>
+              <p className="mt-3 text-lg font-bold">+233 241 751 355</p>
 
               <p className="mt-2 text-sm leading-6 text-white/60">
                 Speak directly with our team about your welding electrode
@@ -183,18 +183,31 @@ export default function ContactPage() {
       </section>
 
       {/* Customer review */}
-      <section id="reviews" className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+      <section
+        id="reviews"
+        className="scroll-mt-28 bg-white px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
+      >
         <div className="mx-auto grid max-w-7xl items-start gap-9 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-orange-200 bg-orange-50 px-4 py-2">
               <span className="h-px w-5 bg-orange-500" />
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">Customer Review</p>
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-orange-500">
+                Customer Review
+              </p>
             </div>
-            <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">Share Your Experience</h2>
-            <p className="mt-4 max-w-xl leading-7 text-slate-600 sm:text-lg sm:leading-8">Have you worked with our electrodes or our team? Send us an honest review to help us improve our products and service.</p>
+            <h2 className="mt-5 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl">
+              Share Your Experience
+            </h2>
+            <p className="mt-4 max-w-xl leading-7 text-slate-600 sm:text-lg sm:leading-8">
+              Have you worked with our electrodes or our team? Send us an honest
+              review to help us improve our products and service.
+            </p>
             <div className="mt-6 rounded-2xl bg-[#102a4a] p-5 text-white sm:p-6">
               <p className="font-bold">Reviews are checked before publishing</p>
-              <p className="mt-2 text-sm leading-6 text-white/65">This protects customer privacy and keeps every published review genuine and relevant.</p>
+              <p className="mt-2 text-sm leading-6 text-white/65">
+                This protects customer privacy and keeps every published review
+                genuine and relevant.
+              </p>
             </div>
           </div>
           <ReviewForm />
