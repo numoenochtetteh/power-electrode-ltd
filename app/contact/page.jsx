@@ -273,7 +273,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="tel:+233244316183"
+              href="tel:+233 241 751 355"
               className="inline-flex min-h-13 w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-7 py-4 font-semibold text-[#102a4a] transition-colors hover:border-orange-500 hover:text-orange-500 sm:w-fit"
             >
               Call for Directions
