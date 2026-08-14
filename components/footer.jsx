@@ -22,22 +22,37 @@ const footerLinks = [
     title: "Support",
     links: [
       { name: "Product Enquiries", href: "/contact" },
-      { name: "Call +233 241 751 355", href: "tel:+233244316183" },
-      { name: "WhatsApp +233 20 059 4776", href: "https://wa.me/233200594776" },
+      {
+        name: "Call 024 175 1355",
+        href: "tel:+233241751355",
+      },
+      {
+        name: "WhatsApp +233 20 059 4776",
+        href: "https://wa.me/233200594776",
+      },
       {
         name: "info@powerelectrode.net",
         href: "mailto:info@powerelectrode.net",
       },
-      { name: "Get Directions", href: "/contact#location" },
+      {
+        name: "Get Directions",
+        href: "/contact#location",
+      },
     ],
   },
 ];
 
 const socialLinks = [
-  { name: "Facebook", type: "facebook", href: null },
-  { name: "Instagram", type: "instagram", href: null },
-  { name: "LinkedIn", type: "linkedin", href: null },
-  { name: "YouTube", type: "youtube", href: null },
+  {
+    name: "Facebook",
+    type: "facebook",
+    href: "https://www.facebook.com/people/Power-Electrode-Ltd/61593163207576/",
+  },
+  {
+    name: "Instagram",
+    type: "instagram",
+    href: null,
+  },
   {
     name: "WhatsApp",
     type: "whatsapp",
@@ -86,34 +101,10 @@ function SocialIcon({ type }) {
           stroke="currentColor"
           strokeWidth="2"
         />
+
         <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
+
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
-      </>
-    );
-  }
-
-  if (type === "linkedin") {
-    return (
-      <>
-        <path
-          d="M6 9v10M6 5.5v.1M10.5 19v-6c0-2.2 1.4-3.5 3.4-3.5 2.2 0 3.6 1.4 3.6 4V19M10.5 10v9"
-          stroke="currentColor"
-          strokeWidth="2.2"
-          strokeLinecap="round"
-        />
-      </>
-    );
-  }
-
-  if (type === "youtube") {
-    return (
-      <>
-        <path
-          d="M21 12c0 2.2-.3 4.3-.7 5-.3.8-1 1.4-1.8 1.6-1.4.4-5 .4-6.5.4s-5.1 0-6.5-.4c-.8-.2-1.5-.8-1.8-1.6-.4-.7-.7-2.8-.7-5s.3-4.3.7-5c.3-.8 1-1.4 1.8-1.6C6.9 5 10.5 5 12 5s5.1 0 6.5.4c.8.2 1.5.8 1.8 1.6.4.7.7 2.8.7 5Z"
-          stroke="currentColor"
-          strokeWidth="1.8"
-        />
-        <path d="m10 9 5 3-5 3V9Z" fill="currentColor" />
       </>
     );
   }
@@ -126,6 +117,7 @@ function SocialIcon({ type }) {
         strokeWidth="1.8"
         strokeLinejoin="round"
       />
+
       <path
         d="M9 8.5c.3 2.7 2 4.5 4.8 5.2l1-1.2c.2-.2.5-.3.8-.2l1.7.8"
         stroke="currentColor"
@@ -224,6 +216,7 @@ export function Footer() {
               </span>
             </div>
 
+            {/* Social media */}
             <div className="mt-6">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-white/70">
                 Connect With Us
@@ -245,18 +238,23 @@ export function Footer() {
                     </svg>
                   );
 
-                  return social.href ? (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.name}
-                      className={classes}
-                    >
-                      {icon}
-                    </a>
-                  ) : (
+                  if (social.href) {
+                    return (
+                      <a
+                        key={social.name}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={social.name}
+                        title={social.name}
+                        className={classes}
+                      >
+                        {icon}
+                      </a>
+                    );
+                  }
+
+                  return (
                     <span
                       key={social.name}
                       title={`${social.name} link coming soon`}
@@ -281,25 +279,33 @@ export function Footer() {
               <div className="mt-3 h-0.5 w-8 rounded-full bg-orange-500" />
 
               <ul className="mt-5 space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      href={link.href}
-                      target={
-                        link.href.startsWith("http") ? "_blank" : undefined
-                      }
-                      rel={
-                        link.href.startsWith("http")
-                          ? "noopener noreferrer"
-                          : undefined
-                      }
-                      className="group inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-orange-400"
-                    >
-                      <span className="h-1 w-1 rounded-full bg-white/30 transition-colors group-hover:bg-orange-400" />
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
+                {section.links.map((link) => {
+                  const isExternal = link.href.startsWith("http");
+
+                  return (
+                    <li key={link.name}>
+                      {isExternal ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-orange-400"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-white/30 transition-colors group-hover:bg-orange-400" />
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="group inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-orange-400"
+                        >
+                          <span className="h-1 w-1 rounded-full bg-white/30 transition-colors group-hover:bg-orange-400" />
+                          {link.name}
+                        </Link>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
