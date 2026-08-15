@@ -51,7 +51,7 @@ const socialLinks = [
   {
     name: "Instagram",
     type: "instagram",
-    href: null,
+    href: "https://www.instagram.com/powerelectrode/",
   },
   {
     name: "WhatsApp",
@@ -59,7 +59,6 @@ const socialLinks = [
     href: "https://wa.me/233200594776",
   },
 ];
-
 function ArrowIcon() {
   return (
     <svg
