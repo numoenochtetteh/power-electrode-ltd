@@ -18,7 +18,8 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "https://power-electrode-ltd.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://power-electrode-ltd.vercel.app",
   ),
   title: {
     default: "Power Electrode Ltd | Welding Electrodes in Ghana",
@@ -40,12 +41,18 @@ export const metadata = {
     title: "Power Electrode Ltd | Welding Electrodes in Ghana",
     description:
       "Dependable welding electrodes manufactured and supplied in Ghana.",
-    images: [{ url: "/images/frame1.webp", alt: "Power Electrode Ltd welding electrodes" }],
+    images: [
+      {
+        url: "/images/frame1.webp",
+        alt: "Power Electrode Ltd welding electrodes",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Power Electrode Ltd | Welding Electrodes in Ghana",
-    description: "Dependable welding electrodes manufactured and supplied in Ghana.",
+    description:
+      "Dependable welding electrodes manufactured and supplied in Ghana.",
     images: ["/images/frame1.webp"],
   },
   robots: { index: true, follow: true },
@@ -61,9 +68,11 @@ export default function RootLayout({ children }) {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Power Electrode Ltd",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://power-electrode-ltd.vercel.app",
+    url:
+      process.env.NEXT_PUBLIC_SITE_URL ||
+      "https://power-electrode-ltd.vercel.app",
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://power-electrode-ltd.vercel.app"}/images/power-electrode-logo.webp`,
-    email: "info@powerelectrode.net",
+    email: "info@powerelectrode.com",
     telephone: "+233244316183",
     address: {
       "@type": "PostalAddress",
@@ -78,7 +87,9 @@ export default function RootLayout({ children }) {
       <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
         />
         {children}
 

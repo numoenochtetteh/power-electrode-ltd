@@ -31,8 +31,8 @@ const footerLinks = [
         href: "https://wa.me/233200594776",
       },
       {
-        name: "info@powerelectrode.net",
-        href: "mailto:info@powerelectrode.net",
+        name: "info@powerelectrode.com",
+        href: "mailto:info@powerelectrode.com",
       },
       {
         name: "Get Directions",

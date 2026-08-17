@@ -33,10 +33,10 @@ const contactDetails = [
   {
     number: "03",
     title: "Email Our Team",
-    detail: "info@powerelectrode.net",
+    detail: "info@powerelectrode.com",
     description:
       "Send us your product enquiries, quotation requests and order details.",
-    href: "mailto:info@powerelectrode.net",
+    href: "mailto:info@powerelectrode.com",
     action: "Send an email",
   },
 ];
@@ -242,10 +242,10 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="mailto:info@powerelectrode.net"
+                href="mailto:info@powerelectrode.com"
                 className="mt-2 inline-block break-all text-lg font-bold text-[#102a4a] transition-colors hover:text-orange-500 sm:text-2xl"
               >
-                info@powerelectrode.net
+                info@powerelectrode.com
               </a>
             </div>
           </div>
