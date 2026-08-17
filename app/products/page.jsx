@@ -117,7 +117,7 @@ export default function ProductsPage() {
           { label: "Send an Enquiry", href: "/contact" },
           {
             label: "Call +233 241 751 355",
-            href: "tel:+233244316183",
+            href: "tel:+233241751355",
             variant: "secondary",
             icon: "phone",
           },
