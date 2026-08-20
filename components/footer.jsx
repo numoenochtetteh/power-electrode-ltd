@@ -54,11 +54,22 @@ const socialLinks = [
     href: "https://www.instagram.com/powerelectrode/",
   },
   {
+    name: "LinkedIn",
+    type: "linkedin",
+    href: "https://www.linkedin.com/in/power-electrode-ltd-55989742b",
+  },
+  {
+    name: "TikTok",
+    type: "tiktok",
+    href: "https://www.tiktok.com/@power.electrode.l",
+  },
+  {
     name: "WhatsApp",
     type: "whatsapp",
     href: "https://wa.me/233200594776",
   },
 ];
+
 function ArrowIcon() {
   return (
     <svg
@@ -100,11 +111,44 @@ function SocialIcon({ type }) {
           stroke="currentColor"
           strokeWidth="2"
         />
-
         <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="2" />
-
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
       </>
+    );
+  }
+
+  if (type === "linkedin") {
+    return (
+      <>
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="2.5"
+          stroke="currentColor"
+          strokeWidth="1.8"
+        />
+        <circle cx="8" cy="8" r="1.2" fill="currentColor" />
+        <path
+          d="M8 11v6M12 17v-3.4c0-1.6.9-2.6 2.3-2.6 1.5 0 2.2 1 2.2 2.7V17M12 11v6"
+          stroke="currentColor"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+        />
+      </>
+    );
+  }
+
+  if (type === "tiktok") {
+    return (
+      <path
+        d="M14.5 4v9.2a4.8 4.8 0 1 1-4.2-4.8v3a1.9 1.9 0 1 0 1.2 1.8V4h3Zm0 0c.3 2.3 1.7 3.8 4 4.2v3a7.1 7.1 0 0 1-4-1.5"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     );
   }
 
@@ -116,7 +160,6 @@ function SocialIcon({ type }) {
         strokeWidth="1.8"
         strokeLinejoin="round"
       />
-
       <path
         d="M9 8.5c.3 2.7 2 4.5 4.8 5.2l1-1.2c.2-.2.5-.3.8-.2l1.7.8"
         stroke="currentColor"
@@ -200,7 +243,6 @@ export function Footer() {
                   stroke="currentColor"
                   strokeWidth="1.8"
                 />
-
                 <circle
                   cx="12"
                   cy="9"
@@ -222,11 +264,16 @@ export function Footer() {
               </p>
 
               <div className="mt-3 flex flex-wrap gap-2.5">
-                {socialLinks.map((social) => {
-                  const classes =
-                    "flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400 hover:bg-orange-500 hover:text-white";
-
-                  const icon = (
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Visit Power Electrode Ltd on ${social.name}`}
+                    title={social.name}
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/70 transition-all duration-300 hover:-translate-y-0.5 hover:border-orange-400 hover:bg-orange-500 hover:text-white"
+                  >
                     <svg
                       viewBox="0 0 24 24"
                       fill="none"
@@ -235,35 +282,8 @@ export function Footer() {
                     >
                       <SocialIcon type={social.type} />
                     </svg>
-                  );
-
-                  if (social.href) {
-                    return (
-                      <a
-                        key={social.name}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={social.name}
-                        title={social.name}
-                        className={classes}
-                      >
-                        {icon}
-                      </a>
-                    );
-                  }
-
-                  return (
-                    <span
-                      key={social.name}
-                      title={`${social.name} link coming soon`}
-                      aria-label={`${social.name} link coming soon`}
-                      className={`${classes} cursor-default hover:translate-y-0 hover:border-white/15 hover:bg-white/5 hover:text-white/70`}
-                    >
-                      {icon}
-                    </span>
-                  );
-                })}
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -280,14 +300,17 @@ export function Footer() {
               <ul className="mt-5 space-y-3">
                 {section.links.map((link) => {
                   const isExternal = link.href.startsWith("http");
+                  const isSpecialLink =
+                    link.href.startsWith("tel:") ||
+                    link.href.startsWith("mailto:");
 
                   return (
                     <li key={link.name}>
-                      {isExternal ? (
+                      {isExternal || isSpecialLink ? (
                         <a
                           href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
                           className="group inline-flex items-center gap-2 text-sm text-white/60 transition-colors duration-300 hover:text-orange-400"
                         >
                           <span className="h-1 w-1 rounded-full bg-white/30 transition-colors group-hover:bg-orange-400" />
