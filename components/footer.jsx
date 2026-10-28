@@ -23,8 +23,8 @@ const footerLinks = [
     links: [
       { name: "Product Enquiries", href: "/contact" },
       {
-        name: "Call 024 175 1355",
-        href: "tel:+233241751355",
+        name: "Call +233 20 059 4776",
+        href: "tel:+233200594776",
       },
       {
         name: "WhatsApp +233 20 059 4776",
