@@ -16,9 +16,9 @@ const contactDetails = [
   {
     number: "01",
     title: "Call Our Team",
-    detail: "+233 241 751 355",
+    detail: "+233 20 059 4776",
     description: "Speak with us about products, prices and availability.",
-    href: "tel:+233241751355",
+    href: "tel:+233200594776",
     action: "Call now",
   },
   {
@@ -75,8 +75,8 @@ export default function ContactPage() {
         actions={[
           { label: "Send an Enquiry", href: "#enquiry" },
           {
-            label: "Call +233 241 751 355",
-            href: "tel:+233241751355",
+            label: "Call +233 20 059 4776",
+            href: "tel:+233200594776",
             variant: "secondary",
             icon: "phone",
           },
@@ -169,7 +169,7 @@ export default function ContactPage() {
                 Prefer to Call?
               </p>
 
-              <p className="mt-3 text-lg font-bold">+233 241 751 355</p>
+              <p className="mt-3 text-lg font-bold">+233 20 059 4776</p>
 
               <p className="mt-2 text-sm leading-6 text-white/60">
                 Speak directly with our team about your welding electrode
@@ -273,7 +273,7 @@ export default function ContactPage() {
             </a>
 
             <a
-              href="tel:+233241751355"
+              href="tel:+233200594776"
               className="inline-flex min-h-13 w-full items-center justify-center rounded-xl border border-slate-300 bg-white px-7 py-4 font-semibold text-[#102a4a] transition-colors hover:border-orange-500 hover:text-orange-500 sm:w-fit"
             >
               Call for Directions
