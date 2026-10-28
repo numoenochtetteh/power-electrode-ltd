@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
       "https://power-electrode-ltd.vercel.app",
     logo: `${process.env.NEXT_PUBLIC_SITE_URL || "https://power-electrode-ltd.vercel.app"}/images/power-electrode-logo.webp`,
     email: "info@powerelectrode.com",
-    telephone: "+233244316183",
+    telephone: "+233200594776",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Central University 282, Ningo Prampram",
