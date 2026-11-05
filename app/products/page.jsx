@@ -116,8 +116,8 @@ export default function ProductsPage() {
         actions={[
           { label: "Send an Enquiry", href: "/contact" },
           {
-            label: "Call +233 20 059 4776",
-            href: "tel:+233200594776",
+            label: "Call 0542470922",
+            href: "tel:+233542470922",
             variant: "secondary",
             icon: "phone",
           },
